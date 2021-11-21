@@ -1,11 +1,15 @@
 /* CSS Document */
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 @import url(https://fonts.googleapis.com/css2?family=Della+Respira&display=swap);
-* { margin: 0; }
+* { margin: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 body, html { height: 100%; padding: 0; margin: 0; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: 'Roboto'; }
 
-.first__section { height: 100vh; background-color: #282A35; }
+label { font-family: 'Roboto'; cursor: pointer; }
+
+.sectionWhite { color: white; background-color: #f5f6fa; -webkit-transition: 0.5s all ease-in-out; transition: 0.5s all ease-in-out; }
+
+.first__section { height: 100vh; background-color: #282A35; -webkit-transition: 0.5s all ease-in-out; transition: 0.5s all ease-in-out; }
 
 .header { background-color: #2F3542; padding: 0px 20px; }
 
@@ -18,6 +22,15 @@ body, html { height: 100%; padding: 0; margin: 0; -webkit-box-sizing: border-box
 .navigation__list { list-style: none; font-size: 16px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 .navigation__list li { margin: 0 20px; }
 .navigation__list-links { color: #ecf0f1; text-decoration: none; letter-spacing: 1px; }
+
+.navigation__list-anotherSublist { position: relative; }
+
+.navigation__list-anotherSublist:hover .subnavigation__list { display: block; }
+
+.subnavigation__list { position: absolute; list-style: none; background-color: #2F3542; padding: 10px 10px; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-align: center; margin-top: 10px; left: 0px; right: 0px; display: none; min-width: 200px; }
+.subnavigation__list li { padding: 10px 0; }
+.subnavigation__list-links { text-decoration: none; color: #ecf0f1; border-bottom: 1px solid transparent; }
+.subnavigation__list-links:hover { border-bottom: 1px solid #f1f6f8; -webkit-transition: 0.3s all ease-in-out; transition: 0.3s all ease-in-out; }
 
 .navigation__list-items { padding: 15px 5px; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 .navigation__list-items .navigation__list-links { border-bottom: 1px solid transparent; -webkit-transition: 0.3s all ease-in-out; transition: 0.3s all ease-in-out; }
