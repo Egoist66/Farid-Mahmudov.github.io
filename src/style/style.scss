@@ -95,6 +95,7 @@ label {
         letter-spacing: 1px;
 
 
+
     }
 }
 
@@ -132,8 +133,13 @@ label {
             border-bottom: 1px solid #f1f6f8;
             transition: 0.3s all ease-in-out;
         }
+
+        &:active {
+            color: #ff5252
+        }
     }
 }
+
 
 .navigation__list {
     &-secondSublist {
@@ -184,6 +190,10 @@ label {
         &:hover {
             border-bottom: 1px solid #f1f6f8;
             transition: 0.3s all ease-in-out;
+        }
+
+        &:active {
+            color: #ff5252
         }
     }
 }
