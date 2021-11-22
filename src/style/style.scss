@@ -105,6 +105,46 @@ label {
 
 }
 
+.navigation__list-secondSublist {
+    position: relative;
+}
+
+.secondsubnavigation__list {
+
+    position: absolute;
+    list-style: none;
+    background-color: #2F3542;
+    padding: 10px 10px;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    left: 0px;
+    right: 0px;
+    display: none;
+    min-width: 200px;
+
+    &-links {
+        text-decoration: none;
+        color: #ecf0f1;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+            border-bottom: 1px solid #f1f6f8;
+            transition: 0.3s all ease-in-out;
+        }
+    }
+}
+
+.navigation__list {
+    &-secondSublist {
+        &:hover {
+            & .secondsubnavigation__list {
+                display: block;
+            }
+        }
+    }
+}
+
 .navigation__list {
 
 

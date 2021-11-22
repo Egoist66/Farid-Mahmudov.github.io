@@ -25,6 +25,14 @@ label { font-family: 'Roboto'; cursor: pointer; }
 
 .navigation__list-anotherSublist { position: relative; }
 
+.navigation__list-secondSublist { position: relative; }
+
+.secondsubnavigation__list { position: absolute; list-style: none; background-color: #2F3542; padding: 10px 10px; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-align: center; margin-top: 10px; left: 0px; right: 0px; display: none; min-width: 200px; }
+.secondsubnavigation__list-links { text-decoration: none; color: #ecf0f1; border-bottom: 1px solid transparent; }
+.secondsubnavigation__list-links:hover { border-bottom: 1px solid #f1f6f8; -webkit-transition: 0.3s all ease-in-out; transition: 0.3s all ease-in-out; }
+
+.navigation__list-secondSublist:hover .secondsubnavigation__list { display: block; }
+
 .navigation__list-anotherSublist:hover .subnavigation__list { display: block; }
 
 .subnavigation__list { position: absolute; list-style: none; background-color: #2F3542; padding: 10px 10px; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-align: center; margin-top: 10px; left: 0px; right: 0px; display: none; min-width: 200px; }
