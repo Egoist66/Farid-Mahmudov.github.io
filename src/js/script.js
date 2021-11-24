@@ -56,20 +56,3 @@ $(document).ready(function () {
     })
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
