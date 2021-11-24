@@ -96,8 +96,8 @@ label {
 
 .first__section {
     max-width: 100%;
+    background-color: #ecf0f1;
     height: 100vh;
-    background: url('../../img/1621005462_23-phonoteka_org-p-fon-dlya-saita-veb-studii-25.jpg') no-repeat center bottom;
     background-size: cover;
     transition: 0.5s all ease-in-out;
 
@@ -111,13 +111,14 @@ label {
     box-sizing: border-box;
 
     &-pagetitle {
-        font-size: 4rem;
+        font-size: 6rem;
+        font-weight: bold;
         letter-spacing: 2px;
         color: #16A085;
         transition: all 0.5s ease-in-out;
 
         &:hover {
-            color: white;
+            color: #232428;
             transition: all 0.5s ease-in-out;
         }
     }
@@ -149,14 +150,15 @@ footer {
     background-color: #232428; // footer
 
 
+
 }
 
 .footer__section {
     // section
 
-    max-width: 100%;
-
+    width: 100%;
     background-color: #232428;
+
 
 }
 
@@ -375,13 +377,19 @@ footer {
         font-size: 2rem;
         display: flex;
         align-items: center;
+        justify-content: space-between;
 
     }
 
     &-items {
-        margin: 0 30px;
+        margin: 0 20px;
         align-items: center;
 
+    }
+
+    &-listanotherbox {
+        display: flex;
+        justify-content: flex-end;
     }
 }
 
@@ -451,7 +459,7 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 0px;
+        padding-top: 50px;
         box-sizing: border-box;
 
         &-pagetitle {
@@ -495,25 +503,36 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 40px;
-        margin: 0;
+        padding-top: 300px;
+
         box-sizing: border-box;
 
         &-pagetitle {
-            font-size: 2rem;
+            font-size: 4rem;
             letter-spacing: 2px;
             color: #16A085;
             transition: all 0.5s ease-in-out;
 
 
             &:hover {
-                color: white;
+                color: #232428;
                 transition: all 0.5s ease-in-out;
             }
         }
 
 
 
+    }
+}
+
+@media(max-width:1202px) {
+
+    .footer__navigation {
+        padding: 50px 15px;
+
+        &-items {
+            margin: 0px 18px;
+        }
     }
 }
 
@@ -524,19 +543,20 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 50px;
-        margin: 0;
+        padding-top: 130px;
+
         box-sizing: border-box;
 
         &-pagetitle {
-            font-size: 2rem;
+            font-size: 4rem;
             letter-spacing: 2px;
             color: #16A085;
             transition: all 0.5s ease-in-out;
 
 
+
             &:hover {
-                color: white;
+                color: #232428;
                 transition: all 0.5s ease-in-out;
             }
         }
