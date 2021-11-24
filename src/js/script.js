@@ -5,6 +5,11 @@ var underSubList = document.querySelector('.secondsubnavigation__list');
 var details = document.querySelector('details');
 
 
+
+
+
+
+
 listItem.addEventListener('click', function () {
     subList.classList.toggle('showBlock');
 
@@ -13,6 +18,15 @@ listItem.addEventListener('click', function () {
 secondItem.addEventListener('click', function () {
     underSubList.classList.toggle('showBlock');
 })
+
+
+
+
+
+
+
+
+
 
 // menu burger
 
@@ -38,9 +52,6 @@ $(document).ready(function () {
         $(this).toggleClass("active-tab").find(".menu-link").toggleClass("active");
         $('.accordeon-content').css("background", "#232428;");
         $('.accordeon-content').css("border-radius", "0px");
-
-
-
 
     })
 

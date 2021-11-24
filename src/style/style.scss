@@ -22,6 +22,7 @@ html {
     box-sizing: border-box;
     font-family: 'Roboto';
     overflow-x: hidden;
+    font-size: 20px;
 
 
 
@@ -95,10 +96,32 @@ label {
 .first__section {
     max-width: 100%;
     height: 100vh;
-    background: url('../../img/1621005462_23-phonoteka_org-p-fon-dlya-saita-veb-studii-25.jpg') no-repeat bottom fixed;
-    margin-bottom: 200px;
+    background: url('../../img/1621005462_23-phonoteka_org-p-fon-dlya-saita-veb-studii-25.jpg') no-repeat center bottom;
     background-size: cover;
     transition: 0.5s all ease-in-out;
+
+}
+
+.first__sectionbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 300px;
+    box-sizing: border-box;
+
+    &-pagetitle {
+        font-size: 4rem;
+        letter-spacing: 2px;
+        color: #16A085;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+            color: white;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+
+
 
 }
 
@@ -121,6 +144,21 @@ header {
 
 }
 
+footer {
+    background-color: #232428; // footer
+
+
+}
+
+.footer__section {
+    // section
+
+    max-width: 100%;
+
+    background-color: #232428;
+
+}
+
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -139,6 +177,9 @@ header {
 .navigation__list-logo {
     display: none;
 }
+
+
+
 
 .navigation__logo>p {
     color: #f1f6f8;
@@ -228,28 +269,8 @@ header {
 }
 
 
-// .navigation__list {
-//     &-secondSublist {
-//         &:hover{
-//             & .secondsubnavigation__list {
-//                 display: block;
-//             }
-//         }
-//     }
-// }
-
-// .navigation__list {
 
 
-//     &-anotherSublist {
-//         &:hover {
-//             & .subnavigation__list {
-//                 display: block;
-
-//             }
-//         }
-//     }
-// }
 
 .showBlock.subnavigation__list {
     display: block;
@@ -322,11 +343,79 @@ header {
 
 }
 
+.footer__navigation {
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0;
+    box-sizing: border-box;
+    align-items: center;
+
+    &-text {
+        color: #16A085;
+        font-size: 2rem;
+        border-bottom: 1px solid #f1f6f8;
+        align-items: center;
+        cursor: pointer;
+
+
+
+    }
+
+    &-number {
+        color: #16A085;
+        align-items: center;
+        font-weight: 700;
+    }
+
+    &-list {
+        list-style: none;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+
+    }
+
+    &-items {
+        margin: 0 30px;
+        align-items: center;
+
+    }
+}
+
+.footer__navigation-box {
+
+    display: flex;
+}
+
+.social {
+    color: #16A085;
+
+    &:hover {
+        color: #24ccaa;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Media queries
 
 
-@media(max-width:937px) {
+
+
+@media(max-width:1011px) {
 
     .navigation {
         display: flex;
@@ -337,6 +426,33 @@ header {
     }
 
 
+    .footer__navigation {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+
+}
+
+@media(max-width:435px) {
+
+    .footer__navigation-list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+
+        &-items {
+            margin: 10px 0;
+        }
+
+
+    }
+
+    .footer__navigation-number {
+        margin-top: 10px;
+    }
 
 }
 
