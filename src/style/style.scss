@@ -430,6 +430,14 @@ footer {
         display: flex;
         flex-direction: column;
 
+        &-list {
+            margin-top: 25px;
+        }
+
+        &-number {
+            margin-top: 15px;
+        }
+
     }
 
 
