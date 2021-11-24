@@ -496,6 +496,29 @@ footer {
 
     // }
 
+    .first__sectionbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+        box-sizing: border-box;
+
+        &-pagetitle {
+            font-size: 4rem;
+            letter-spacing: 2px;
+            color: #16A085;
+            transition: all 0.5s ease-in-out;
+
+            &:hover {
+                color: white;
+                transition: all 0.5s ease-in-out;
+            }
+        }
+
+
+
+    }
+
     .navigation__logo {
         display: none;
     }
