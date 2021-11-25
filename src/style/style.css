@@ -83,8 +83,11 @@ footer { background-color: #232428; }
   .footer__navigation-number { margin-top: 10px; } }
 @media (max-width: 1202px) { .footer__navigation { padding: 20px 15px; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
   .footer__navigation-items { margin: 0px 18px; -webkit-box-align: center; -ms-flex-align: center; align-items: center; } }
+@media (max-width: 334px) { .footer__navigation-list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; padding: 0px 10px; }
+  .footer__navigation-list-items { margin: 10px 0; }
+  .footer__navigation-text { font-size: 22px; }
+  .footer__navigation-number { font-size: 14px; } }
 @media (max-width: 638px) { .first__section { max-width: 100%; background: url("../../img/bigstock--177642103[1].jpg") no-repeat center; background-size: cover; }
-  .navigation__logo { display: none; }
   .navigation__list { display: none; border-radius: 0px; }
   #menu__wrapper { overflow: hidden; width: 100%; margin-left: -50px; display: block; position: relative; }
   #menu__wrapper-hamburgermenu { position: relative; width: 25px; height: 20px; margin: 15px; cursor: pointer; }

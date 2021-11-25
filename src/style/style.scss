@@ -474,6 +474,30 @@ footer {
     }
 }
 
+@media(max-width:334px) {
+
+    .footer__navigation-list {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 10px;
+
+        &-items {
+            margin: 10px 0;
+        }
+
+    }
+
+    .footer__navigation-text {
+        font-size: 22px;
+    }
+
+    .footer__navigation-number {
+        font-size: 14px;
+    }
+
+
+}
+
 
 @media(max-width:638px) {
     // .navigation__list {
@@ -493,9 +517,7 @@ footer {
 
 
 
-    .navigation__logo {
-        display: none;
-    }
+
 
     .navigation__list {
         display: none;
