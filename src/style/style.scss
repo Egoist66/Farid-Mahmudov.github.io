@@ -499,6 +499,9 @@ footer {
 }
 
 
+
+
+
 @media(max-width:638px) {
     // .navigation__list {
     //     display: flex;
@@ -615,8 +618,12 @@ footer {
         }
 
 
+    }
 
-
+    .secondsubnavigation__list {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        z-index: 10;
 
     }
 
@@ -633,6 +640,10 @@ footer {
     #menu__wrapper-hamburgermenu.open span:nth-child(3) {
         transform: translateY(0px) rotate(-135deg);
     }
+
+
+
+
 
     .accordeon {
 
@@ -665,8 +676,14 @@ footer {
         display: none;
     }
 
+    .secondsubnavigation__list {
+        padding: 25px 0px;
+        z-index: 10;
+        background-color: #232428;
+    }
+
     .diable_list-items {
-        z-index: -1;
+        z-index: -2;
     }
 
 
@@ -675,22 +692,13 @@ footer {
         font-size: 16px;
         position: relative;
         letter-spacing: 1px;
-        z-index: 2;
+        z-index: 10;
         overflow: hidden;
         border-radius: 0px;
 
-
-
-
-
-
-
     }
 
-    .accordion-content {
-        display: none;
 
-    }
 
     .accordion-toggle.active-tab {
 
