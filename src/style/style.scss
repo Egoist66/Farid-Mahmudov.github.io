@@ -95,33 +95,15 @@ label {
     height: 100%;
     background: url('../../img/bigstock--177642103[1].jpg') no-repeat center fixed;
     background-size: cover;
-    transition: 0.5s all ease-in-out;
-
-}
-
-.first__sectionbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 300px;
-    box-sizing: border-box;
-
-    &-pagetitle {
-        font-size: 6rem;
-        font-weight: bold;
-        letter-spacing: 2px;
-        color: #16A085;
-        transition: all 0.5s ease-in-out;
-
-        &:hover {
-            color: #232428;
-            transition: all 0.5s ease-in-out;
-        }
-    }
-
 
 
 }
+
+
+
+
+
+
 
 
 .wrapper {
