@@ -29,6 +29,22 @@ html {
 
 }
 
+// additional styles
+
+
+
+.number {
+    text-decoration: none;
+    color: #16A085;
+    align-items: center;
+
+    &:hover {
+        color: #24ccaa;
+    }
+}
+
+
+
 
 // menu burger styles
 
@@ -354,6 +370,10 @@ footer {
         font-weight: 700;
         margin: 0 50px;
 
+        &:hover {
+            color: #24ccaa;
+        }
+
     }
 
     &-list {
@@ -368,6 +388,15 @@ footer {
     &-items {
         margin: 0 15px;
         align-items: center;
+        border-bottom: 2px solid transparent;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+
+            border-bottom: 2px solid #f1f6f8;
+            transition: all 0.5s ease-in-out;
+
+        }
 
     }
 
