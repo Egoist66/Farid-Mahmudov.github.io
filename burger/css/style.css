@@ -1,0 +1,277 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+
+}
+
+
+body,
+html {
+
+    height: 100%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.wrapper {}
+
+.container {
+    max-width: 1170px;
+    padding: 5px 15px;
+    margin: 0 auto;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5e5373;
+    z-index: 3;
+}
+
+.header__logo {
+    flex: 0 0 70px;
+
+
+}
+
+.header__logo>img {
+    align-items: center;
+    max-width: 100%;
+    border-radius: 70%;
+    overflow: hidden;
+    display: block;
+    z-index: 5;
+    position: relative;
+
+}
+
+.header__body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.header__menu {
+    display: flex;
+
+}
+
+.header__list {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+
+}
+
+.header__link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.829);
+}
+
+.header__list>li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.header__burger {
+    display: none;
+}
+
+.content {
+    margin: 120px 0;
+}
+
+
+
+
+.content__text {
+    font-size: 18px;
+    line-height: 25px;
+
+}
+
+
+
+
+li:hover {
+    border-bottom: 2px solid seashell;
+    transition: 0.3s all ease-in-out;
+}
+
+li {
+    border-bottom: 2px solid transparent;
+    transition: 0.3s all ease-in-out;
+}
+
+a:hover {
+    color: white;
+}
+
+
+
+
+
+
+
+@media(max-width:622px) {
+
+
+    .header__menu {
+
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0bc19d;
+        padding: 100px 0px 0px 0px;
+        transition: all 0.5s ease-in-out;
+        overflow: auto;
+
+    }
+
+    /* используем свойство top изначально меню за пределами так как значение -100 по вертикали и при нажатии оно поялвяется сверху вниз */
+
+    .active.header__menu {
+        top: 0;
+        transition: all 0.5s ease-in-out;
+
+
+    }
+
+    body.lock {
+        overflow: hidden;
+    }
+
+
+
+    .header__list {
+        display: block;
+        margin: 0 20px;
+        font-size: 20px;
+
+    }
+
+    .header__link {
+        font-size: 24px;
+    }
+
+    /* обязательно чтобы элементы были блочными на не в строку */
+
+
+    .header__body {
+        height: 50px;
+    }
+
+    .header__logo {
+        flex: 0 0 45px;
+    }
+
+    .header__list>li {
+        margin: 10px 10px;
+        border-bottom: 1px solid snow;
+
+    }
+
+    a {
+        transition: 0.3s all ease-in-out;
+    }
+
+    a:hover {
+        color: #5e5373;
+        transition: 0.3s all ease-in-out;
+    }
+
+
+
+
+    /* scripts */
+
+
+
+
+
+
+
+
+    .header__burger.active::before {
+        transform: rotate(45deg);
+        top: 15px;
+
+
+    }
+
+    .header__burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 3px;
+
+    }
+
+    .header__burger.active span {
+        transform: scale(0);
+    }
+
+
+
+
+
+
+    /* scripts */
+
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        margin-top: 15px;
+        z-index: 4;
+        cursor: pointer;
+    }
+
+    .header__burger::before,
+    .header__burger::after {
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease-in-out;
+
+
+    }
+
+    .header__burger span {
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease-in-out;
+
+    }
+
+    .header__burger::before {
+        top: 0px;
+
+    }
+
+    .header__burger::after {
+        bottom: 0px;
+    }
+}
