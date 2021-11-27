@@ -143,6 +143,7 @@ a:hover {
         transition: all 0.5s ease-in-out;
         overflow: auto;
 
+
     }
 
     /* используем свойство top изначально меню за пределами так как значение -100 по вертикали и при нажатии оно поялвяется сверху вниз */
@@ -155,7 +156,7 @@ a:hover {
     }
 
     body.lock {
-        overflow: hidden;
+        overflow: auto;
     }
 
 
