@@ -8,11 +8,6 @@ var accordeon = document.querySelector('.accordeon');
 var diableItems = document.querySelectorAll('.diable_list-items');
 
 
-
-
-
-
-
 listItem.addEventListener('click', function () {
     subList.classList.toggle('showBlock');
 
@@ -22,8 +17,6 @@ secondItem.addEventListener('click', function () {
     underSubList.classList.toggle('showBlock');
 
 })
-
-
 
 
 
@@ -56,5 +49,31 @@ $(document).ready(function () {
 
 
     })
+
+})
+
+// hide submenu
+
+let burger = $('#menu__wrapper-hamburgermenu');
+let navigation__list = $('.navigation__list ');
+let subnav__list = $('.subnavigation__list');
+
+
+
+$('body').click(function (event) {
+    if (!burger.is(event.target) && burger.has(event.target).length === 0 && !navigation__list.is(event.target) && navigation__list.has(event.target).length === 0) {
+
+        navigation__list.toggleClass('showed');
+        menuBurger.classList.toggle('open');
+
+        if (menuBurger.classList.contains('open')) {
+            menuBurger.classList.remove('open');
+            navigation__list.removeClass('showed');
+        }
+
+
+
+    }
+
 
 })
