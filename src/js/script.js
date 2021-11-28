@@ -52,7 +52,7 @@ $(document).ready(function () {
     $(".navigation__list").find(".accordeon-toggle").click(function () {
         $(this).next().toggleClass("open").slideToggle("fast");
         $(this).toggleClass("active-tab").find(".menu-link").toggleClass("active");
-        $('.accordeon-content').css("border-radius", "0px");
+        // $('.accordeon-content').css("border-radius", "0px");
 
 
     })
