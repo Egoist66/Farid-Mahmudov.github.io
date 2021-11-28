@@ -191,12 +191,12 @@ html {
 
     .about__meboxtext {
 
-        text-align: center;
-        word-wrap: break-word;
+        text-align: justify;
+        padding: 10px 10px;
         font-size: 1rem;
 
         &-Text {
-            max-width: 500px;
+            max-width: 410px;
         }
 
 
