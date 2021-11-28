@@ -128,31 +128,55 @@ html {
 }
 
 
-.about__mebox-button {
+// .button__box {
 
-    border: none;
-    background-color: #1dbd9d;
-    display: inline-block;
-    padding: 15px 15px;
-    margin: 150px 0;
-    transition: 0.5s all ease-in-out;
+//     & button {
 
-    &:hover {
-        border-radius: 10px;
-        transition: 0.5s all ease-in-out;
-        background-color: #16A085;
-    }
+//         border: none;
+//         background-color: #1dbd9d;
+//         display: inline-block;
+//         padding: 15px 45px;
+//         margin: 150px 0;
+//         transition: 0.5s all ease-in-out;
+//         cursor: pointer;
+
+
+//         & a {
+//             font-size: 18px;
+//             align-items: center;
+//             text-decoration: none;
+//             color: snow;
+//             letter-spacing: 1px;
+//         }
+//     }
+
+// }
+
+
+.button__box {
 
     & a {
+
+        border: none;
+        background-color: #1da88c;
+        align-items: center;
+        display: inline-block;
+        padding: 15px 45px;
+        margin: 150px 0;
+        transition: 0.5s all ease-in-out;
+        cursor: pointer;
         text-decoration: none;
-        padding: 20px 30px;
-        color: white;
+        color: snow;
         font-size: 18px;
         letter-spacing: 1px;
 
+        &:hover {
+            background-color: #16A085;
+            border-radius: 7px;
+            transition: 0.5s all ease-in-out;
+        }
+
     }
-
-
 }
 
 
@@ -182,12 +206,28 @@ html {
 
     }
 
-    .about__mebox-button {
+    .button__box {
+
         display: flex;
         justify-content: center;
 
+        & a {
 
+            border: none;
+            background-color: #1dbd9d;
+            align-items: center;
+            padding: 15px 45px;
+            margin: 150px 0;
+            transition: 0.5s all ease-in-out;
+            cursor: pointer;
+            text-decoration: none;
+            color: snow;
+            font-size: 18px;
+            letter-spacing: 1px;
+
+        }
     }
+
 
 
 

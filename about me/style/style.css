@@ -26,12 +26,12 @@ body, html { height: 100%; padding: 0; margin: 0; box-sizing: border-box; font-f
 .about__mebox .about__meboxtext { padding: 0 12px; }
 .about__mebox .about__meboxtext-Text { color: snow; white-space: pre-line; word-wrap: break-word; }
 
-.about__mebox-button { border: none; background-color: #1dbd9d; display: inline-block; padding: 15px 15px; margin: 150px 0; transition: 0.5s all ease-in-out; }
-.about__mebox-button:hover { border-radius: 10px; transition: 0.5s all ease-in-out; background-color: #16A085; }
-.about__mebox-button a { text-decoration: none; padding: 20px 30px; color: white; font-size: 18px; letter-spacing: 1px; }
+.button__box a { border: none; background-color: #1da88c; align-items: center; display: inline-block; padding: 15px 45px; margin: 150px 0; transition: 0.5s all ease-in-out; cursor: pointer; text-decoration: none; color: snow; font-size: 18px; letter-spacing: 1px; }
+.button__box a:hover { background-color: #16A085; border-radius: 7px; transition: 0.5s all ease-in-out; }
 
 @media (max-width: 1203px) { .about__mebox { display: flex; flex-direction: column; align-items: center; }
   .about__meboxtext { text-align: center; word-wrap: break-word; font-size: 1rem; }
   .about__meboxtext-Text { max-width: 500px; }
   .about__meboxtext ul { text-align: center; }
-  .about__mebox-button { display: flex; justify-content: center; } }
+  .button__box { display: flex; justify-content: center; }
+  .button__box a { border: none; background-color: #1dbd9d; align-items: center; padding: 15px 45px; margin: 150px 0; transition: 0.5s all ease-in-out; cursor: pointer; text-decoration: none; color: snow; font-size: 18px; letter-spacing: 1px; } }
