@@ -17,7 +17,7 @@ body, html { height: 100%; padding: 0; margin: 0; box-sizing: border-box; font-f
 .wrapper { max-width: 1180px; margin: 0 auto; }
 
 .about__meblock { margin: 0; padding: 0 20px; width: 100%; padding: 20px 40px; background-color: #232428; color: #1dbd9d; }
-.about__meblock h1 { padding: 10px 0; font-size: 46px; letter-spacing: 1px; }
+.about__meblock h1 { padding: 10px 0; font-size: 46px; letter-spacing: 1px; display: inline-block; }
 
 .active.about__mebox-img { transform: scale(1.6); transition: 0.3s all ease-in-out; }
 
@@ -35,3 +35,8 @@ body, html { height: 100%; padding: 0; margin: 0; box-sizing: border-box; font-f
   .about__meboxtext ul { text-align: center; }
   .button__box { display: flex; justify-content: center; }
   .button__box a { border: none; background-color: #1dbd9d; align-items: center; padding: 15px 45px; margin: 150px 0; transition: 0.5s all ease-in-out; cursor: pointer; text-decoration: none; color: snow; font-size: 18px; letter-spacing: 1px; } }
+@media (max-width: 324px) { .about__meblock { margin: 0; padding: 0 20px; width: 100%; padding: 20px 40px; background-color: #232428; color: #1dbd9d; }
+  .about__meblock h1 { padding: 10px 0; font-size: 28px; letter-spacing: 1px; display: inline-block; }
+  .about__mebox-img { width: 220px; } }
+@media (max-width: 330px) { .about__mebox-img { width: 220px; }
+  .active.about__mebox-img { transform: scale(1.3); transition: 0.3s all ease-in-out; } }

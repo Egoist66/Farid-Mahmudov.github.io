@@ -74,6 +74,7 @@ html {
         padding: 10px 0;
         font-size: 46px;
         letter-spacing: 1px;
+        display: inline-block;
 
 
     }
@@ -128,29 +129,7 @@ html {
 }
 
 
-// .button__box {
 
-//     & button {
-
-//         border: none;
-//         background-color: #1dbd9d;
-//         display: inline-block;
-//         padding: 15px 45px;
-//         margin: 150px 0;
-//         transition: 0.5s all ease-in-out;
-//         cursor: pointer;
-
-
-//         & a {
-//             font-size: 18px;
-//             align-items: center;
-//             text-decoration: none;
-//             color: snow;
-//             letter-spacing: 1px;
-//         }
-//     }
-
-// }
 
 
 .button__box {
@@ -178,6 +157,8 @@ html {
 
     }
 }
+
+// media 
 
 
 @media(max-width:1203px) {
@@ -231,4 +212,48 @@ html {
 
 
 
+}
+
+
+@media (max-width:324px) {
+    .about__meblock {
+        margin: 0;
+        padding: 0 20px;
+        width: 100%;
+        padding: 20px 40px;
+        background-color: #232428;
+        color: #1dbd9d;
+
+
+        & h1 {
+            padding: 10px 0;
+            font-size: 28px;
+            letter-spacing: 1px;
+            display: inline-block;
+
+
+        }
+
+    }
+
+
+    .about__mebox {
+
+        &-img {
+
+            width: 220px;
+        }
+    }
+}
+
+@media(max-width:330px) {
+
+    .about__mebox-img {
+        width: 220px;
+    }
+
+    .active.about__mebox-img {
+        transform: scale(1.3);
+        transition: 0.3s all ease-in-out;
+    }
 }
