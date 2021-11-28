@@ -29,6 +29,10 @@ p {
     line-height: 1.5;
 }
 
+ul {
+    margin-top: 30px;
+}
+
 
 
 
@@ -41,6 +45,7 @@ html {
     box-sizing: border-box;
     font-family: 'Roboto';
     overflow-x: hidden;
+    font-size: 16px;
     scroll-behavior: smooth;
     background-color: #282A35;
     color: #16A085
@@ -110,6 +115,8 @@ html {
 
     .about__meboxtext {
 
+        padding: 0 12px;
+
         &-Text {
             color: snow;
             white-space: pre-line;
@@ -144,6 +151,44 @@ html {
         letter-spacing: 1px;
 
     }
+
+
+}
+
+
+@media(max-width:1203px) {
+    .about__mebox {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .about__meboxtext {
+
+        text-align: center;
+        word-wrap: break-word;
+        font-size: 1rem;
+
+        &-Text {
+            max-width: 500px;
+        }
+
+
+        & ul {
+            text-align: center;
+        }
+
+    }
+
+    .about__mebox-button {
+        display: flex;
+        justify-content: center;
+
+
+    }
+
 
 
 }
