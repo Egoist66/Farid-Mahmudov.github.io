@@ -57,10 +57,27 @@ $(document).ready(function () {
 let burger = $('#menu__wrapper-hamburgermenu');
 let navigation__list = $('.navigation__list ');
 let subnav__list = $('.subnavigation__list');
+let navigation__links = $('.navigation__list-links ');
+
+
+
+
+// $('body').click(function (event) {
+//     if (!navigation__links.is(event.target) && navigation__links.has(event.target).length === 0) {
+
+
+//     }
+
+
+// })
+
 
 
 
 $('body').click(function (event) {
+
+
+
     if (!burger.is(event.target) && burger.has(event.target).length === 0 && !navigation__list.is(event.target) && navigation__list.has(event.target).length === 0) {
 
         navigation__list.toggleClass('showed');
@@ -70,7 +87,6 @@ $('body').click(function (event) {
             menuBurger.classList.remove('open');
             navigation__list.removeClass('showed');
         }
-
 
 
     }
