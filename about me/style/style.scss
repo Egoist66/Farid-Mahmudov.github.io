@@ -14,15 +14,40 @@
 
 }
 
-li {
+.elements {
     margin-top: 10px;
     cursor: pointer;
     font-size: 18px;
 
+
+    // &::before {
+    //     content: "";
+    //     bottom: 0;
+    //     left: 0;
+    //     position: absolute;
+
+    //     width: 45%;
+    //     height: 1px;
+    //     background-color: snow;
+    //     transition: 0.3s all ease-in-out;
+    //     transform: scaleX(0);
+    // }
+
     &:hover {
         color: #1dbd9d;
-
     }
+
+
+    // &:hover::before {
+
+    //     transform: scaleX(1);
+    //     background-color: white;
+    //     color: #1dbd9d;
+    //     // text-decoration: underline 1px solid snow;
+
+
+
+    // }
 }
 
 p {
@@ -98,7 +123,7 @@ html {
 
 
     &-img {
-        margin-top: -333px;
+        margin-top: -323px;
         border-radius: 3px;
         width: 300px;
         background: transparent;
