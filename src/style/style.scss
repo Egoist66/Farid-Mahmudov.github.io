@@ -364,6 +364,10 @@ footer {
         align-items: center;
         cursor: pointer;
 
+        &::after {
+            content: '->';
+        }
+
 
 
     }
@@ -460,6 +464,13 @@ footer {
 
         &-number {
             margin-top: 15px;
+        }
+
+        &-text {
+
+            &::after {
+                content: '';
+            }
         }
 
     }
