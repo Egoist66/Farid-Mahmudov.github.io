@@ -101,7 +101,7 @@ footer { background-color: #232428; }
   .footer__navigation-number { margin-top: 15px; padding-right: 17px; }
   .footer__navigation-text::after { content: ''; }
   .arrow { display: none; }
-  .showfooterList.footer__navigation-list { position: relative; right: 7px; } }
+  .showfooterList.footer__navigation-list { position: relative; right: 0px; } }
 @media (max-width: 435px) { .footer__navigation-list { display: -webkit-box; display: -ms-flexbox; display: flex; padding: 0px 10px; margin-top: 20px; }
   .footer__navigation-list-items { margin: 10px 0; }
   .footer__navigation-number { margin-top: 10px; } }
