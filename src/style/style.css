@@ -36,8 +36,8 @@ footer { background-color: #232428; }
 .navigation__list-logo { display: none; }
 
 .navigation__logo > p { color: #f1f6f8; font-size: 30px; padding: 15px 5px; -webkit-box-align: center; -ms-flex-align: center; align-items: center; letter-spacing: 1px; font-family: 'Dell Respira'; font-weight: 700; }
-.navigation__logo > p::before { content: "<"; padding: 0 10px; }
-.navigation__logo > p::after { content: "/ >"; padding: 0 10px; }
+.navigation__logo > p::before { content: "< /"; padding: 0 10px; }
+.navigation__logo > p::after { content: " >"; padding: 0 10px; }
 
 .navigation__list { list-style: none; font-size: 16px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 .navigation__list li { margin: 0 20px; }

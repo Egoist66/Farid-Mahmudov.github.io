@@ -194,13 +194,13 @@ footer {
     font-weight: 700;
 
     &::before {
-        content: "<";
+        content: "< /";
         padding: 0 10px;
 
     }
 
     &::after {
-        content: "/ >";
+        content: " >";
         padding: 0 10px;
     }
 }
