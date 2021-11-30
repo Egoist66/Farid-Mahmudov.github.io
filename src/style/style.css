@@ -101,8 +101,8 @@ footer { background-color: #232428; }
 @media (max-width: 394px) { .footer__navigation-list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; } }
 @media (max-width: 439px) { .footer__navigation-list { display: -webkit-box; display: -ms-flexbox; display: flex; padding: 0px 10px; -webkit-transition: 0.3s all ease-in-out; transition: 0.3s all ease-in-out; }
   .footer__navigation-list-items { margin: 10px 0; -webkit-transition: 0.3s all ease-in-out; transition: 0.3s all ease-in-out; }
-  .footer__navigation-text { font-size: 30px; -webkit-transition: 0.3s all ease-in-out; transition: 0.3s all ease-in-out; }
-  .footer__navigation-number { font-size: 13px; -webkit-transition: 0.3s all ease-in-out; transition: 0.3s all ease-in-out; }
+  .footer__navigation-text { font-size: 33px; -webkit-transition: 0.3s all ease-in-out; transition: 0.3s all ease-in-out; }
+  .footer__navigation-number { font-size: 15px; -webkit-transition: 0.3s all ease-in-out; transition: 0.3s all ease-in-out; }
   .social { font-size: 32px; -webkit-transition: 0.3s all ease-in-out; transition: 0.3s all ease-in-out; } }
 @media (max-width: 638px) { .first__section { max-width: 100%; background: url("../../img/bigstock--177642103[1].jpg") no-repeat center; background-size: cover; }
   .subnavigation__list { padding: 11px 30px; min-width: 320px; }
