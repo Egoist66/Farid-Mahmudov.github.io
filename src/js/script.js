@@ -83,26 +83,31 @@ $('body').click(function (event) {
 
 // elements focus
 
-var myLink = $('.footer__navigation-text');
-var elements = $('.social');
-var footerList = $('.footer__navigation-list');
+
+// var myLink = $('.footer__navigation-text');
+// var elements = $('.social');
+// var footerList = $('.footer__navigation-list');
 
 
-myLink.click(function () {
+// myLink.click(function () {
 
-    elements.toggleClass('focus');
-    footerList.toggleClass('showfooterList');
-    myLink.toggleClass('focusText');
+//     elements.toggleClass('focus');
+//     footerList.toggleClass('showfooterList');
+//     myLink.toggleClass('focusText');
 
 
+// })
+
+
+var MyLink = document.querySelector('.footer__navigation-text');
+var elements = document.querySelectorAll('.social');
+var footerList = document.querySelector('.footer__navigation-list');
+
+MyLink.addEventListener('click', function () {
+
+    footerList.classList.toggle('showfooterList');
+    MyLink.classList.toggle('focusText');
+    elements.forEach(element => {
+        element.classList.toggle('focus');
+    })
 })
-
-
-// const obj1 = { a: 1, b: 2, c: 3 };
-// const obj2 = { a: 10, d: 5 };
-
-// console.log({ ...obj1, d: 4, ...obj2, c: 30 });
-
-// window.setTimeout(() => {
-//     alert("Hey!");
-// }, 1000);
