@@ -32,6 +32,15 @@ html {
 
 // additional styles
 
+.footer__navigation-text {
+    transition: 0.3s all ease-in-out;
+}
+
+.focusText.footer__navigation-text {
+    color: #27eec6;
+    transition: 0.3s all ease-in-out;
+}
+
 .focus.social {
     color: #27eec6;
     transition: all 0.3s ease-in-out;
@@ -69,7 +78,7 @@ html {
 }
 
 
-
+//
 
 // menu burger styles
 

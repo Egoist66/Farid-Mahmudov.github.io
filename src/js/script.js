@@ -92,6 +92,7 @@ myLink.click(function () {
 
     elements.toggleClass('focus');
     footerList.toggleClass('showfooterList');
+    myLink.toggleClass('focusText');
 
 
 })

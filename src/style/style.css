@@ -5,6 +5,10 @@
 
 body, html { height: 100%; padding: 0; margin: 0; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: 'Roboto'; overflow-x: hidden; font-size: 20px; scroll-behavior: smooth; }
 
+.footer__navigation-text { -webkit-transition: 0.3s all ease-in-out; transition: 0.3s all ease-in-out; }
+
+.focusText.footer__navigation-text { color: #27eec6; -webkit-transition: 0.3s all ease-in-out; transition: 0.3s all ease-in-out; }
+
 .focus.social { color: #27eec6; -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
 
 .social { -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
