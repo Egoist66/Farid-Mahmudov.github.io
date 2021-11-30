@@ -518,11 +518,17 @@ footer {
     }
 }
 
+@media(max-width:394px) {
+    .footer__navigation-list {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 @media(max-width:439px) {
 
     .footer__navigation-list {
         display: flex;
-        flex-direction: column;
         padding: 0px 10px;
         transition: 0.3s all ease-in-out;
 
@@ -534,7 +540,7 @@ footer {
     }
 
     .footer__navigation-text {
-        font-size: 26px;
+        font-size: 30px;
         transition: 0.3s all ease-in-out;
     }
 
@@ -544,7 +550,7 @@ footer {
     }
 
     .social {
-        font-size: 34px;
+        font-size: 32px;
         transition: 0.3s all ease-in-out;
     }
 
