@@ -52,13 +52,14 @@ html {
 
 .footer__navigation-list {
     position: relative;
-    right: -120%;
+    right: -100%;
     transition: 0.6s all ease-out;
 }
 
 
 
 .showfooterList.footer__navigation-list {
+    position: relative;
     right: 0;
     transition: 0.6s all ease-in;
 }
@@ -71,6 +72,7 @@ html {
     text-decoration: none;
     color: #16A085;
     align-items: center;
+
 
     &:hover {
         color: #24ccaa;
@@ -514,7 +516,7 @@ footer {
 
         &-number {
             margin-top: 15px;
-            padding-right: 17px;
+            padding-right: 19px;
         }
 
         &-text {
@@ -530,10 +532,10 @@ footer {
         display: none;
     }
 
-    .showfooterList.footer__navigation-list {
-        position: relative;
-        right: 0px;
-    }
+    // .showfooterList.footer__navigation-list {
+    //     position: relative;
+    //     right: 0px;
+    // }
 
 
 
@@ -584,6 +586,12 @@ footer {
     .footer__navigation-list {
         display: flex;
         flex-direction: column;
+
+    }
+
+
+    .showfooterList.footer__navigation-list {
+        right: 8px;
     }
 }
 
