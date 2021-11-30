@@ -32,6 +32,30 @@ html {
 
 // additional styles
 
+.focus.social {
+    color: #27eec6;
+    transition: all 0.3s ease-in-out;
+}
+
+.social {
+    transition: all 0.3s ease-in-out;
+}
+
+.footer__navigation-list {
+    position: relative;
+    right: -120%;
+    transition: 0.6s all ease-out;
+}
+
+
+
+.showfooterList.footer__navigation-list {
+    right: 0;
+    transition: 0.6s all ease-in;
+}
+
+
+
 
 
 .number {
@@ -360,7 +384,7 @@ footer {
     &-text {
         color: #16A085;
         font-size: 2rem;
-        border-bottom: 1px solid #f1f6f8;
+
         align-items: center;
         cursor: pointer;
 

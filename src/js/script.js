@@ -28,8 +28,6 @@ secondItem.addEventListener('click', function () {
 // menu burger
 
 
-
-
 function rotateSpan() {
     menuBurger.classList.toggle('open');
 }
@@ -62,21 +60,8 @@ let navigation__links = $('.navigation__list-links ');
 
 
 
-// $('body').click(function (event) {
-//     if (!navigation__links.is(event.target) && navigation__links.has(event.target).length === 0) {
-
-
-//     }
-
-
-// })
-
-
-
 
 $('body').click(function (event) {
-
-
 
     if (!burger.is(event.target) && burger.has(event.target).length === 0 && !navigation__list.is(event.target) && navigation__list.has(event.target).length === 0) {
 
@@ -94,6 +79,22 @@ $('body').click(function (event) {
 
 })
 
+
+
+// elements focus
+
+var myLink = $('.footer__navigation-text');
+var elements = $('.social');
+var footerList = $('.footer__navigation-list');
+
+
+myLink.click(function () {
+
+    elements.toggleClass('focus');
+    footerList.toggleClass('showfooterList');
+
+
+})
 
 
 // const obj1 = { a: 1, b: 2, c: 3 };
