@@ -397,13 +397,24 @@ footer {
         align-items: center;
         cursor: pointer;
 
-        &::after {
-            content: '->';
+        &::before {
+            content: 'Click to link ';
+            padding-right: 4px;
+
+        }
+
+
+
+        &:hover {
+            color: #24ccaa;
         }
 
 
 
     }
+
+
+
 
     &-number {
         color: #16A085;
@@ -442,6 +453,11 @@ footer {
     }
 
 
+}
+
+.arrow {
+    font-size: 28px;
+    align-items: center;
 }
 
 .footer__navigation-box {
@@ -493,10 +509,12 @@ footer {
 
         &-list {
             margin-top: 25px;
+            margin-right: 10px;
         }
 
         &-number {
             margin-top: 15px;
+            padding-right: 17px;
         }
 
         &-text {
@@ -507,6 +525,16 @@ footer {
         }
 
     }
+
+    .arrow {
+        display: none;
+    }
+
+    .showfooterList.footer__navigation-list {
+        position: relative;
+        right: 7px;
+    }
+
 
 
 
