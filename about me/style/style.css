@@ -10,9 +10,7 @@ p { line-height: 1.5; }
 
 ul { margin-top: 30px; }
 
-body, html { height: 100%; padding: 0; margin: 0; box-sizing: border-box; font-family: 'Roboto'; overflow-x: hidden; font-size: 16px; scroll-behavior: smooth; background-color: #282A35; color: #16A085; }
-
-.about__me { height: 100%; }
+body, html { height: 100vh; padding: 0; margin: 0; box-sizing: border-box; font-family: 'Roboto'; overflow-x: hidden; font-size: 16px; scroll-behavior: smooth; background-color: #282A35; color: #16A085; }
 
 .wrapper { max-width: 1180px; margin: 0 auto; }
 
