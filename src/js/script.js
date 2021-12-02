@@ -20,11 +20,6 @@ secondItem.addEventListener('click', function () {
 
 
 
-
-
-
-
-
 // menu burger
 
 
@@ -81,25 +76,6 @@ $('body').click(function (event) {
 
 
 
-// var myLink = $('.footer__navigation-text');
-// var elements = $('.social');
-// var footerList = $('.footer__navigation-list');
-
-
-// myLink.click(function () {
-
-//     elements.toggleClass('focus');
-//     footerList.toggleClass('showfooterList');
-//     myLink.toggleClass('focusText');
-
-
-// })
-
-
-
-
-
-
 // anchor
 
 var link = $('.navigation__list-links')
@@ -134,24 +110,19 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
-
-
 // elements focus
 
-var MyLink = document.querySelector('.footer__navigation-text');
-var elements = document.querySelectorAll('.social');
-var footerList = document.querySelector('.footer__navigation-list');
 
-MyLink.addEventListener('click', function () {
+var myLink = $('.footer__navigation-text');
+var elements = $('.social');
+var footerList = $('.footer__navigation-list');
 
-    footerList.classList.toggle('showfooterList');
-    MyLink.classList.toggle('focusText');
-    elements.forEach(element => {
-        element.classList.toggle('focus');
-    })
+
+myLink.click(function () {
+
+    elements.toggleClass('focus');
+    footerList.toggleClass('showfooterList');
+    myLink.toggleClass('focusText');
+
+
 })
