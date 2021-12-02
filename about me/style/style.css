@@ -36,11 +36,12 @@ body, html { height: 100vh; padding: 0; margin: 0; box-sizing: border-box; font-
 .resume-download { color: crimson; text-decoration: none; }
 .resume-download:hover { color: #880a24; }
 
+.button__box { display: flex; justify-content: space-between; align-items: center; }
 .button__box a { border: none; background-color: #1da88c; align-items: center; display: inline-block; padding: 15px 45px; margin: 150px 0; transition: 0.5s all ease-in-out; cursor: pointer; text-decoration: none; color: snow; font-size: 18px; letter-spacing: 1px; }
 .button__box a:hover { background-color: snow; color: #232428; border-radius: 7px; transition: 0.5s all ease-in-out; }
 
 @media (max-width: 1203px) { .about__mebox { display: flex; flex-direction: column; align-items: center; }
-  .about__mebox-img { margin-top: 20px; margin-bottom: 20px; }
+  .about__mebox-img { margin-top: 20px; margin-bottom: 20px; margin-right: 9px; }
   .about__meboxtext { text-align: justify; padding: 10px 10px; font-size: 1rem; }
   .about__meboxtext-Text { max-width: 410px; }
   .about__meboxtext ul { text-align: center; }
