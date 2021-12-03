@@ -3,6 +3,17 @@
 @import url(https://fonts.googleapis.com/css2?family=Della+Respira&display=swap);
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto'; list-style: none; }
 
+.about__meboxtext-read { display: flex; justify-content: center; }
+
+#read { text-decoration: none; color: crimson; transition: 0.3s all ease-in-out; font-size: 18px; letter-spacing: 1px; }
+#read:hover { color: #880a24; transition: 0.3s all ease-in-out; }
+
+.skills { color: snow; align-items: center; }
+
+.text { transition: 0.5s all ease-in-out; opacity: 0; }
+
+.textopacity.text { opacity: 1; transition: 0.5s all ease-in-out; }
+
 .elements { margin-top: 10px; cursor: pointer; font-size: 18px; }
 .elements:hover { color: #1dbd9d; }
 
@@ -22,7 +33,7 @@ body, html { height: 100vh; padding: 0; margin: 0; box-sizing: border-box; font-
 .about__mebox { height: 100%; }
 
 .about__mebox { margin-top: 70px; display: flex; justify-content: space-between; align-items: center; }
-.about__mebox-img { margin-top: -343px; border-radius: 3px; width: 300px; background: transparent; cursor: pointer; transition: 0.3s all ease-in-out; }
+.about__mebox-img { margin-top: -321px; border-radius: 3px; width: 300px; background: transparent; cursor: pointer; transition: 0.3s all ease-in-out; }
 .about__mebox .about__meboxtext { padding: 0 12px; }
 .about__mebox .about__meboxtext-Text { color: snow; white-space: pre-line; word-wrap: break-word; }
 
@@ -41,12 +52,13 @@ body, html { height: 100vh; padding: 0; margin: 0; box-sizing: border-box; font-
 .button__box a:hover { background-color: snow; color: #232428; border-radius: 7px; transition: 0.5s all ease-in-out; }
 
 @media (max-width: 1203px) { .about__mebox { display: flex; flex-direction: column; align-items: center; }
-  .about__mebox-img { margin-top: 20px; margin-bottom: 20px; margin-right: 9px; }
+  .about__mebox-img { margin-top: 20px; margin-bottom: 20px; margin-right: 2px; }
   .about__meboxtext { text-align: justify; padding: 10px 10px; font-size: 1rem; }
-  .about__meboxtext-Text { max-width: 410px; }
+  .about__meboxtext-Text { max-width: 500px; }
   .about__meboxtext ul { text-align: center; }
   .button__box { display: flex; justify-content: center; }
-  .button__box a { border: none; background-color: #1dbd9d; align-items: center; padding: 15px 45px; margin: 150px 0; transition: 0.5s all ease-in-out; cursor: pointer; text-decoration: none; color: snow; font-size: 18px; letter-spacing: 1px; } }
+  .button__box a { border: none; background-color: #1dbd9d; align-items: center; padding: 15px 45px; margin: 150px 0; transition: 0.5s all ease-in-out; cursor: pointer; text-decoration: none; color: snow; font-size: 18px; letter-spacing: 1px; }
+  #read { margin-top: 20px; } }
 @media (max-width: 324px) { .about__meblock { margin: 0; padding: 0 20px; width: 100%; padding: 20px 40px; background-color: #232428; color: #1dbd9d; }
   .about__meblock h1 { padding: 10px 0; font-size: 28px; letter-spacing: 1px; display: inline-block; }
   .about__mebox-img { width: 220px; } }

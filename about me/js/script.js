@@ -6,3 +6,13 @@ $(document).ready(function () {
         img.toggleClass('active');
     })
 });
+
+
+var read = $('#read');
+var text = $('.text');
+
+$(document).ready(function () {
+    read.click(function () {
+        text.toggleClass('textopacity');
+    })
+});

@@ -15,6 +15,46 @@
 }
 
 
+//!!! scripts
+
+.about__meboxtext-read {
+    display: flex;
+    justify-content: center;
+}
+
+#read {
+    text-decoration: none;
+    color: crimson;
+    transition: 0.3s all ease-in-out;
+    font-size: 18px;
+    letter-spacing: 1px;
+
+    &:hover {
+        color: rgb(136, 10, 36);
+        transition: 0.3s all ease-in-out;
+
+    }
+}
+
+.skills {
+    color: snow;
+
+    align-items: center;
+}
+
+.text {
+
+    transition: 0.5s all ease-in-out;
+    opacity: 0;
+
+}
+
+.textopacity.text {
+    opacity: 1;
+    transition: 0.5s all ease-in-out;
+}
+
+
 
 
 
@@ -24,34 +64,11 @@
     font-size: 18px;
 
 
-    // &::before {
-    //     content: "";
-    //     bottom: 0;
-    //     left: 0;
-    //     position: absolute;
-
-    //     width: 45%;
-    //     height: 1px;
-    //     background-color: snow;
-    //     transition: 0.3s all ease-in-out;
-    //     transform: scaleX(0);
-    // }
-
     &:hover {
         color: #1dbd9d;
     }
 
 
-    // &:hover::before {
-
-    //     transform: scaleX(1);
-    //     background-color: white;
-    //     color: #1dbd9d;
-    //     // text-decoration: underline 1px solid snow;
-
-
-
-    // }
 }
 
 p {
@@ -129,7 +146,7 @@ html {
 
 
     &-img {
-        margin-top: -343px;
+        margin-top: -321px;
         border-radius: 3px;
         width: 300px;
         background: transparent;
@@ -156,6 +173,10 @@ html {
             color: snow;
             white-space: pre-line;
             word-wrap: break-word;
+
+
+
+
 
         }
     }
@@ -245,7 +266,7 @@ html {
         &-img {
             margin-top: 20px;
             margin-bottom: 20px;
-            margin-right: 9px;
+            margin-right: 2px;
         }
 
     }
@@ -257,7 +278,7 @@ html {
         font-size: 1rem;
 
         &-Text {
-            max-width: 410px;
+            max-width: 500px;
         }
 
 
@@ -290,6 +311,10 @@ html {
         }
 
 
+    }
+
+    #read {
+        margin-top: 20px;
     }
 
 
