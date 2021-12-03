@@ -10,9 +10,9 @@
 
 .skills { color: snow; align-items: center; }
 
-.text { transition: 0.5s all ease-in-out; opacity: 0; }
+.text { transition: 0.5s all ease-out; opacity: 0; }
 
-.textopacity.text { opacity: 1; transition: 0.5s all ease-in-out; }
+.textopacity.text { opacity: 1; transition: 0.5s all ease-in; }
 
 .elements { margin-top: 10px; cursor: pointer; font-size: 18px; }
 .elements:hover { color: #1dbd9d; }
@@ -33,7 +33,7 @@ body, html { height: 100vh; padding: 0; margin: 0; box-sizing: border-box; font-
 .about__mebox { height: 100%; }
 
 .about__mebox { margin-top: 70px; display: flex; justify-content: space-between; align-items: center; }
-.about__mebox-img { margin-top: -321px; border-radius: 3px; width: 300px; background: transparent; cursor: pointer; transition: 0.3s all ease-in-out; }
+.about__mebox-img { margin-top: -334px; border-radius: 3px; width: 300px; background: transparent; cursor: pointer; transition: 0.3s all ease-in-out; }
 .about__mebox .about__meboxtext { padding: 0 12px; }
 .about__mebox .about__meboxtext-Text { color: snow; white-space: pre-line; word-wrap: break-word; }
 
