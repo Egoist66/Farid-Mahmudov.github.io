@@ -271,6 +271,12 @@ html {
 
     }
 
+    .ul__box {
+        &-list {
+            padding: 30px 0;
+        }
+    }
+
 
 
     .about__meboxtext {
@@ -289,6 +295,11 @@ html {
         }
 
     }
+
+    .skills {
+        text-align: center;
+    }
+
 
     .button__box {
 
