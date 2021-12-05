@@ -70,7 +70,7 @@
 
 
                                     <li class="subnavigation__list-item ">
-                                        <a class="subnavigation__list-links" href="Mamon Landing/main.html">
+                                        <a class="subnavigation__list-links" href="Mamon Landing/main.php">
                                             <span>
                                                 <nobr>Mamon Landing</nobr>
                                             </span>
@@ -110,7 +110,7 @@
 
                                     <li class="secondsubnavigation__list-item">
                                         <a target="_blank" class="secondsubnavigation__list-links"
-                                            href="Squares/squares.html">Squares
+                                            href="Squares/squares.php">Squares
                                         </a>
                                     </li>
 
@@ -125,7 +125,7 @@
 
 
                             <li class="navigation__list-items  diable_list-items ">
-                                <a class="navigation__list-links" href="about me/about_me.html">Обо
+                                <a class="navigation__list-links" href="about me/about_me.php">Обо
                                     мне</a>
                             </li>
                             <li class="navigation__list-items  diable_list-items">

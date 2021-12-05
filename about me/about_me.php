@@ -114,7 +114,7 @@
 
                 <!-- <button type="button"> -->
 
-                <a class="mainpage" href="../index.html">На главную</a>
+                <a class="mainpage" href="../index.php">На главную</a>
 
                 <!-- </button> -->
 
