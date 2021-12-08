@@ -24,13 +24,14 @@
 
 #read {
     text-decoration: none;
-    color: crimson;
+    color: #1da88c;
     transition: 0.3s all ease-in-out;
     font-size: 18px;
     letter-spacing: 1px;
+    font-weight: 700;
 
     &:hover {
-        color: rgb(136, 10, 36);
+        color: #1dbd9d;
         transition: 0.3s all ease-in-out;
 
     }
@@ -98,7 +99,25 @@ html {
 }
 
 
+.form__button {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
 
+
+
+    & a {
+        text-decoration: none;
+        color: crimson;
+        transition: 0.3s all ease-in-out;
+
+        &:hover {
+            color: #880a24;
+            transition: 0.3s all ease-in-out;
+        }
+    }
+
+}
 
 .wrapper {
     max-width: 1180px;
@@ -146,7 +165,7 @@ html {
 
 
     &-img {
-        margin-top: -334px;
+        margin-top: -377px;
         border-radius: 3px;
         width: 300px;
         background: transparent;
@@ -328,6 +347,15 @@ html {
 
     #read {
         margin-top: 20px;
+    }
+
+    .form__button {
+        text-align: center;
+        margin-right: 10px;
+
+        & a {
+            text-align: center;
+        }
     }
 
 
