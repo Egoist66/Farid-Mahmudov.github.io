@@ -7,35 +7,28 @@ var li = document.querySelectorAll('li');
 
 // main Page Scripts
 
-content.addEventListener('copy', function () {
-    alert('Код скопирован');
-})
-
 createhtml.addEventListener('click', function () {
     var query = confirm('Хотите создать стартовую разметку?');
-
-
-
     switch (query) {
         case true:
             alert("let's code!");
             break
         default:
-            alert('Возникла ошибка' + '&#128532');
+            alert('Возникла ошибка' + ':(');
     }
-    var doc = document.createElement('div');
-    var output = doc.innerHTML = `<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-        
-</body>
-</html>`
+    let doc = document.createElement('div');
+    let output = doc.innerHTML = `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+            
+    </body>
+    </html>`
 
     content.value = output;
 
@@ -43,6 +36,32 @@ createhtml.addEventListener('click', function () {
 
 
 });
+
+
+
+sessionStorage["key"] = "value";
+
+save.addEventListener('click', function () {
+
+
+    window.localStorage.setItem(content.name, content.value);
+    if (true) {
+        alert('Изменения сохранены');
+    }
+
+
+
+});
+
+content.value = window.localStorage.getItem(content.name, content.value);
+
+
+
+
+content.addEventListener('copy', function () {
+    alert('Код скопирован');
+})
+
 
 
 reset.addEventListener('click', function () {
@@ -63,26 +82,6 @@ document.querySelector('.downLoad').onclick = function () {
 };
 
 
-document.addEventListener("DOMContentLoaded", function () { // событие загрузки страницы
-
-    sessionStorage["key"] = "value";
-
-    content.value = window.localStorage.getItem(content.name, content.value);
-
-    save.addEventListener('click', function () {
-
-        var content = document.querySelector('#content');
-
-        window.localStorage.setItem(content.name, content.value);
-        if (true) {
-            alert('Изменения сохранены');
-        }
-
-
-    });
-
-
-});
 
 
 

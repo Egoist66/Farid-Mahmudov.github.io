@@ -10,6 +10,7 @@
   text-decoration: none;
   margin: 0;
   padding: 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 
@@ -100,12 +101,14 @@ video {
   font: inherit;
   font-size: 100%;
   vertical-align: baseline;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
 }
 
 /* line 22, ../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html {
+html,
+body {
   line-height: 1;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 /* line 24, ../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
