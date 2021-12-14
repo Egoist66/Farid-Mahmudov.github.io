@@ -2,6 +2,11 @@ var img = $('.about__mebox-img');
 console.log(img);
 
 $(document).ready(function () {
+    $('body').fadeToggle(1000);
+});
+
+
+$(document).ready(function () {
     img.click(function () {
         img.toggleClass('active');
     })
@@ -16,3 +21,4 @@ $(document).ready(function () {
         text.toggleClass('textopacity');
     })
 });
+

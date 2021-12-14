@@ -7,6 +7,10 @@ link.addEventListener('click', function (event) {
 })
 
 
+$(document).ready(function () {
+    $('body').fadeToggle(1000);
+});
+
 
 var burger = $('.header__burger');
 var navigation = $('.navigation')

@@ -85,6 +85,10 @@ document.addEventListener("DOMContentLoaded", function () { // событие з
 });
 
 
+$(document).ready(function () {
+    $('body').fadeToggle(1000);
+});
+
 
 
 
