@@ -7,6 +7,18 @@ var li = document.querySelectorAll('li');
 
 // main Page Scripts
 
+document.querySelector('.button').addEventListener('click', function () {
+    let file = document.getElementById('file').files[0];
+    let reader = new FileReader();
+    reader.readAsText(file);
+    reader.onload = function () {
+        content.value = reader.result;
+    }
+    reader.onerror = function () {
+        console.log(reader.error);
+    }
+})
+
 createhtml.addEventListener('click', function () {
     var query = confirm('Хотите создать стартовую разметку?');
     switch (query) {
