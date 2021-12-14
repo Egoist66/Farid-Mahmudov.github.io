@@ -7,62 +7,6 @@ var li = document.querySelectorAll('li');
 
 // main Page Scripts
 
-content.addEventListener('copy', function () {
-    alert('Код скопирован');
-})
-
-createhtml.addEventListener('click', function () {
-    var query = confirm('Хотите создать стартовую разметку?');
-
-
-
-    switch (query) {
-        case true:
-            alert("let's code!");
-            break
-        default:
-            alert('Возникла ошибка' + '&#128532');
-    }
-    var doc = document.createElement('div');
-    var output = doc.innerHTML = `<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        
-    </body>
-    </html>`
-
-    content.value = output;
-
-
-
-
-});
-
-
-reset.addEventListener('click', function () {
-    content.value = '';
-})
-
-document.querySelector('.downLoad').onclick = function () {
-    let content = document.getElementById('content').value;
-    if (content != '') {
-        let csvData = 'data:application/txt;charset=utf-8,' + encodeURIComponent(content);
-        this.href = csvData;
-        this.target = '_blank';
-        this.download = 'index.html';
-    }
-    else {
-        return false;
-    }
-};
-
-
 document.addEventListener("DOMContentLoaded", function () { // событие загрузки страницы
 
     sessionStorage["key"] = "value";
@@ -81,13 +25,71 @@ document.addEventListener("DOMContentLoaded", function () { // событие з
 
     });
 
+    content.addEventListener('copy', function () {
+        alert('Код скопирован');
+    })
+
+    createhtml.addEventListener('click', function () {
+        var query = confirm('Хотите создать стартовую разметку?');
+
+
+
+        switch (query) {
+            case true:
+                alert("let's code!");
+                break
+            default:
+                alert('Возникла ошибка' + '&#128532');
+        }
+        var doc = document.createElement('div');
+        var output = doc.innerHTML = `<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+    <body>
+            
+    </body>
+    </html>`
+
+        content.value = output;
+
+
+
+
+    });
+
+
+    reset.addEventListener('click', function () {
+        content.value = '';
+    })
+
+    document.querySelector('.downLoad').onclick = function () {
+        let content = document.getElementById('content').value;
+        if (content != '') {
+            let csvData = 'data:application/txt;charset=utf-8,' + encodeURIComponent(content);
+            this.href = csvData;
+            this.target = '_blank';
+            this.download = 'index.html';
+        }
+        else {
+            return false;
+        }
+    };
+
 
 });
 
 
-$(document).ready(function () {
-    $('body').fadeToggle(1000);
-});
+
+
+
+
+
+
 
 
 
