@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1500">
+    <title>CSS</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            background-color: #FFFFD0;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            min-width: 1500px;
+            overflow-x: hidden;
+
+        }
+
+        .wrapper {
+
+            width: 1500px;
+            /* display: flex;
+            justify-content: space-around; */
+
+        }
+
+        .textare_block {
+            float: left;
+
+        }
+
+        textarea {
+            background-color: #30323d;
+            white-space: pre-wrap;
+            resize: none;
+            width: 650px;
+            height: 100vh;
+            outline: none;
+            border: none;
+            padding: 30px;
+            transition: all 0.3s ease-in-out;
+            color: white;
+            font-size: 15px;
+            overflow: auto;
+            resize: none;
+
+        }
+
+        .boxlink {
+            float: right;
+            margin-right: 25%;
+            margin-top: 30px;
+            margin-bottom: 20px;
+
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            background-color: #5a5c68;
+            padding: 15px 30px;
+            border-radius: 12px;
+            transition: 0.5s all ease-in-out;
+
+        }
+
+        a:hover {
+            background: #30323d;
+            transition: 0.5s all ease-in-out;
+        }
+
+        .savecss {
+            padding: 15px 33px;
+        }
+
+        .clearcss {
+            padding: 15px 44px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="textare_block">
+
+            <textarea contenteditable="true" name="css" id="areacss"></textarea>
+
+
+        </div>
+
+
+        <div class="boxlink">
+
+            <a download="true" href="#" class="loadcss">Скачать css</a>
+
+
+        </div>
+
+        <div class="boxlink">
+
+            <a href="#" class="savecss">Сохранить</a>
+
+
+        </div>
+
+
+        <div class="boxlink">
+
+            <a href="#" class="clearcss">Удалить</a>
+
+
+        </div>
+
+        <div style="clear: both;" class="clear"></div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script async src="cssjs/script.js"></script>
+</body>
+
+</html>
