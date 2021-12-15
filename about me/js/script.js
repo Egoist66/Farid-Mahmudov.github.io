@@ -3,6 +3,7 @@ console.log(img);
 
 $(document).ready(function () {
     $('body').fadeToggle(1000);
+
 });
 
 

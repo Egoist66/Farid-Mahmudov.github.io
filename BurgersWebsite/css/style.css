@@ -1,0 +1,346 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,800;1,700&family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body,
+html {
+    min-width: 1300px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+}
+
+
+.header {
+    width: 100%;
+    background: linear-gradient(180deg, #0C4C7B -100%, #1E2F40 100%);
+    min-height: 862px;
+
+}
+
+.header__imgblock {
+
+    background: url('../img/img.png') no-repeat -80px 0px;
+    background-size: cover;
+    min-height: 870px;
+    width: 100%;
+    cursor: pointer;
+
+
+}
+
+
+.header__contextblock {
+    padding: 0px 70px;
+    display: flex;
+    flex-direction: column;
+    width: 74%;
+}
+
+
+.header__contextblock-worktime {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: #FBB731;
+}
+
+h1 {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 87px;
+
+    text-transform: uppercase;
+    color: #FAF9F9;
+    padding: 15px 0;
+
+}
+
+.text {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 140%;
+    color: #DEDEDE;
+    padding: 30px 0;
+
+}
+
+.header__button {
+    font-family: Nunito Sans;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1E2F40;
+    background-color: #FBB731;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s all cubic-bezier(.18, .89, .32, 1.28);
+}
+
+.header__button:active {
+    transform: scale(1.098);
+    transition: 0.3s all cubic-bezier(.18, .89, .32, 1.28);
+}
+
+.header__button:hover {
+    background-color: #c2850b;
+    color: #DEDEDE;
+    transition: 0.3s all ease-in-out;
+}
+
+.second__page {
+    height: 100%;
+
+    background: #E5E5E5;
+}
+
+.second__wrapper {
+    width: 1250px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 200px 0;
+
+
+}
+
+.banners__images {
+    height: 395px;
+    width: 580px;
+    border-radius: 4px;
+
+
+}
+
+
+.first {
+
+    background: url('../img/firstbanner.png') no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+
+.first:hover {
+    opacity: 1;
+    transition: 0.3s all ease-in-out;
+}
+
+.second {
+    background: url('../img/secondbanner.png') no-repeat;
+    background-size: cover;
+}
+
+
+/* second banner */
+
+
+.first__banner-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 120px 60px;
+    opacity: 0.8;
+    transition: 0.3s all ease-in-out;
+}
+
+
+
+.first__banner-text:hover {
+    opacity: 1;
+    transition: 0.3s all ease-in-out;
+}
+
+.discount {
+    background: #F37335;
+    border-radius: 14px;
+    width: 101px;
+    text-align: center;
+    padding: 5px 10px;
+    font-family: Nunito Sans;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.first__banner-text h2 {
+    font-family: Nunito Sans;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 76px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+}
+
+.text_2 {
+    font-family: Lato;
+    font-size: 15px;
+    line-height: 24px;
+    color: #FAF9F9;
+}
+
+.second__banner-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 120px 60px;
+    min-width: 299px;
+    opacity: 1;
+}
+
+.freeOfcharge {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    /* identical to box height, or 127% */
+    color: #FFFFFF;
+
+}
+
+.second__banner-text>p {
+    padding: 10px 0;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+    /* or 160% */
+    color: #FAF9F9;
+
+}
+
+.third_page {
+    height: 200px;
+}
+
+.footer {
+    height: 250px;
+    padding: 30px 20px;
+    background: #1E2F40;
+
+}
+
+.third__wrapper {
+    width: 1250px
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 30px;
+
+}
+
+.footer__links {
+    font-family: Lato;
+    font-size: 15px;
+    line-height: 24px;
+    color: #DEDEDE;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s all ease-in-out;
+    display: inline-block;
+    margin-bottom: 10px;
+
+}
+
+.footer__title {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 38px;
+
+    /* identical to box height, or 190% */
+
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+}
+
+.footer__links:hover {
+    color: #f8f8f8;
+    border-bottom: 1px solid white;
+    transition: 0.3s all ease-in-out;
+
+}
+
+.footer__tilte-items {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 24px;
+    /* or 160% */
+    color: #FAF9F9;
+
+}
+
+.work {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+    /* identical to box height, or 160% */
+
+
+    color: #DEDEDE;
+
+}
+
+.footer__navogationbox {
+    padding-bottom: 10px;
+}
+
+.phone_number>p {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 38px;
+    /* identical to box height, or 190% */
+
+    text-transform: uppercase;
+
+    color: #FBB731;
+}
