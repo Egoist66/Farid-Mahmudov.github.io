@@ -69,12 +69,13 @@ save.addEventListener('click', function () {
 content.value = window.localStorage.getItem(content.name, content.value);
 
 
-function myCopyFunction() {
-    var copyText = document.getElementById("content");
-    copyText.select();
+copy.addEventListener('click', function () {
+    content.select();
     document.execCommand("copy");
     alert('Код скопирован');
-}
+
+})
+
 
 // content.addEventListener('copy', function () {
 //     alert('Код скопирован');
