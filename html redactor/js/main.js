@@ -22,15 +22,11 @@ document.querySelector('.button').addEventListener('click', function () {
 
 createhtml.addEventListener('click', function () {
     var query = confirm('Хотите создать стартовую разметку?');
+    let doc = document.createElement('div');
     switch (query) {
         case true:
             alert("let's code!");
-            break
-        default:
-            alert('Возникла ошибка' + ':(');
-    }
-    let doc = document.createElement('div');
-    let output = doc.innerHTML = `<!DOCTYPE html>
+            let output = doc.innerHTML = `<!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -42,6 +38,13 @@ createhtml.addEventListener('click', function () {
             
     </body>
     </html>`
+            content.value = output;
+            break
+        default:
+            alert('Возникла ошибка' + ':(');
+    }
+
+
 
     content.value = output;
 
