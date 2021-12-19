@@ -56,6 +56,29 @@ html {
   transition: 0.6s all cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
+.navigation__list {
+  position: relative;
+  -webkit-animation: nav 1.5s linear;
+          animation: nav 1.5s linear;
+}
+
+@-webkit-keyframes nav {
+  0% {
+    right: -90%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+
+@keyframes nav {
+  0% {
+    right: -90%;
+  }
+  100% {
+    right: 0%;
+  }
+}
 .number {
   text-decoration: none;
   color: #16A085;
@@ -526,6 +549,9 @@ footer {
   .navigation__list {
     display: none;
     border-radius: 0px;
+    -webkit-animation: none;
+            animation: none;
+    position: static;
   }
 
   #menu__wrapper {
