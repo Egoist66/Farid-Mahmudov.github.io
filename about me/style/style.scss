@@ -45,14 +45,28 @@
 
 .text {
 
-    transition: 0.5s all ease-out;
-    opacity: 0;
+
+    transition: 1s all ease;
+    position: relative;
+    top: -1500px;
 
 }
 
+// @keyframes textmove {
+//     0% {
+//         right: -115%;
+//     }
+
+//     100% {
+//         right: 0%;
+//     }
+// }
+
 .textopacity.text {
-    opacity: 1;
-    transition: 0.5s all ease-in;
+
+    transition: 1s all ease;
+    // animation: textmove 2s linear;
+    top: 0px;
 }
 
 
@@ -138,8 +152,23 @@ html {
         font-size: 46px;
         letter-spacing: 1px;
         display: inline-block;
+        animation: title 2s linear;
+        position: relative;
 
 
+    }
+
+}
+
+@keyframes title {
+
+    0% {
+        right: -115%;
+    }
+
+    100% {
+
+        right: 0%;
     }
 
 }

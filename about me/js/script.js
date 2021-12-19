@@ -20,6 +20,7 @@ var text = $('.text');
 $(document).ready(function () {
     read.click(function () {
         text.toggleClass('textopacity');
+
     })
 });
 
