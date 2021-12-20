@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1200">
+    <link rel="stylesheet" href="style/myNormilize.css">
+    <link rel="stylesheet" href="style/main.css">
+    <title>Editor</title>
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+
+        <div class="app">
+
+            <div name='imgbox' class="box image">
+
+                <img name='img' id="image" src="" alt="enter the picture">
+
+
+
+                <div class="input">
+
+                    <input accept="image/jpeg,image/png,image/gif" id="img-url" type="text"
+                        placeholder="Введите URL картинки">
+
+                </div>
+
+            </div>
+
+            <div class="box settings">
+                <div class="sliders">
+                    <div class="slider">
+                        <label for="grayscale">Оттенки серого</label>
+                        <input type="range" name="grayscale" min="0" max="100" value="" id="grayscale">
+                    </div>
+
+                    <div class="slider">
+                        <label for="contrast">Контраст</label>
+                        <input type="range" name="contrast" min="0" max="200" value="" id="contrast">
+                    </div>
+
+                    <div class="slider">
+                        <label for="brightness">Яркость</label>
+                        <input type="range" name="brightness" min="0" max="200" value="" id="brightness">
+                    </div>
+
+                    <div class="slider">
+                        <label for="sepia">Сепия</label>
+                        <input type="range" name="sepia" min="0" max="100" value="" id="sepia">
+                    </div>
+
+                    <div class="slider">
+                        <label for="saturate">Насыщенность</label>
+                        <input type="range" name="saturate" min="0" max="200" value="" id="saturate">
+                    </div>
+
+                    <div class="slider">
+                        <label for="invert">Инверсия</label>
+                        <input type="range" name="invert" min="0" max="100" value="" id="invert">
+                    </div>
+
+                    <div class="slider">
+                        <label for="blur">Размытие</label>
+                        <input type="range" name="blur" min="0" max="100" value="" id="blur">
+                    </div>
+                    <div class="slider filebox">
+                        <label class="resetLabel" for="resetImg">Удалить каритнку</label>
+                        <input style="display: none;" id="resetImg" type="reset" name="reset">
+
+                    </div>
+
+
+                </div>
+                <div class="buttons">
+                    <button class="btn" id="reset" disabled>Сбросить</button>
+                </div>
+
+                <div class="save_box">
+                    <button type="button" id="save">Сохранить</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script defer src="scripts/app.js"></script>
+</body>
+
+</html>
