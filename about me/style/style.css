@@ -109,21 +109,21 @@ html {
     font-size: 46px;
     letter-spacing: 1px;
     display: inline-block;
-    -webkit-animation: title 2s linear;
-            animation: title 2s linear;
+    -webkit-animation: title  1s linear;
+            animation: title  1s linear;
     position: relative; }
 
 @-webkit-keyframes title {
   0% {
-    right: -115%; }
+    top: -200px; }
   100% {
-    right: 0%; } }
+    top: 0px; } }
 
 @keyframes title {
   0% {
-    right: -115%; }
+    top: -200px; }
   100% {
-    right: 0%; } }
+    top: 0px; } }
 .active.about__mebox-img {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);

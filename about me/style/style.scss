@@ -152,7 +152,7 @@ html {
         font-size: 46px;
         letter-spacing: 1px;
         display: inline-block;
-        animation: title 2s linear;
+        animation: title  1s linear;
         position: relative;
 
 
@@ -163,12 +163,12 @@ html {
 @keyframes title {
 
     0% {
-        right: -115%;
+        top: -200px;
     }
 
     100% {
 
-        right: 0%;
+        top: 0px;
     }
 
 }
