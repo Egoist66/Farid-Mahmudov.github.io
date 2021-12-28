@@ -37,14 +37,14 @@
           align-items: center; }
 
 .text {
-  -webkit-transition: 0.5s all ease;
-  transition: 0.5s all ease;
+  -webkit-transition: 0.7s all ease;
+  transition: 0.7s all ease;
   position: relative;
-  right: -140%; }
+  right: -180%; }
 
 .textopacity.text {
-  -webkit-transition: 0.5s all ease;
-  transition: 0.5s all ease;
+  -webkit-transition: 0.7s all ease;
+  transition: 0.7s all ease;
   right: 0%; }
 
 .elements {
@@ -103,7 +103,13 @@ html {
   width: 100%;
   padding: 20px 40px;
   background-color: #232428;
-  color: #1dbd9d; }
+  color: #1dbd9d;
+  position: -webkit-sticky;
+  position: sticky;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  top: 0;
+  z-index: 10; }
   .about__meblock h1 {
     padding: 10px 0;
     font-size: 46px;
@@ -218,6 +224,9 @@ html {
       transition: 0.5s all ease-in-out; }
 
 @media (max-width: 1203px) {
+  .about__meblock {
+    position: static; }
+
   .about__mebox {
     display: -webkit-box;
     display: -ms-flexbox;

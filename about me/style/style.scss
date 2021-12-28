@@ -46,9 +46,9 @@
 .text {
 
 
-    transition: 0.5s all ease;
+    transition: 0.7s all ease;
     position: relative;
-    right: -140%;
+    right: -180%;
 
 }
 
@@ -64,7 +64,7 @@
 
 .textopacity.text {
 
-    transition: 0.5s all ease;
+    transition: 0.7s all ease;
     // animation: textmove 2s linear;
     right: 0%;
 }
@@ -145,6 +145,10 @@ html {
     padding: 20px 40px;
     background-color: #232428;
     color: #1dbd9d;
+    position: sticky;
+    transition: 0.5s;
+    top: 0;
+    z-index: 10;
 
 
     & h1 {
@@ -305,6 +309,11 @@ html {
 
 
 @media(max-width:1203px) {
+
+    .about__meblock {
+        position: static;
+    }
+
     .about__mebox {
 
         display: flex;
