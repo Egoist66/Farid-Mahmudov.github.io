@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* media queries */
+
+
+@media(max-width:1078px){
+
+    .header__topNavigationMenu {
+        float: none;
+        padding-left: 30%;
+    }
+    
+}
+
+@media(max-width:767px){
+    .header__top-number {
+        display: none;
+    }
+    
+    .header__topIcons-menu {
+        display: none;
+    }
+    
+    .header__topNavigationMenu {
+        display: none;
+    }
+}
