@@ -122,7 +122,7 @@
       transition: 0.3s all ease-in-out;
     }
   }
-  @media (max-width: 638px) {
+  @media (max-width: 661px) {
     .first__section {
       max-width: 100%;
       background: url("../../img/bigstock--177642103[1].jpg") no-repeat center;
@@ -237,12 +237,14 @@
     .accordeon {
       -webkit-transition: all 0.5s ease-in-out;
       transition: all 0.5s ease-in-out;
+     
     }
   
     .accordeon.showed {
       display: block;
       -webkit-transition: all 0.5s ease-in-out;
       transition: all 0.5s ease-in-out;
+      z-index: 0;
     }
   
     .navigation__list-links {
@@ -286,3 +288,40 @@
     }
   }
   
+
+  @media(max-width:1395px){
+    .popup__title {
+      top: 10px;
+    }
+
+    .close__cross {
+      display: none;
+  }
+
+  @media(max-width:679px){
+
+    .popup__img {
+      margin-left: -52px;
+    }
+
+
+    .popup__box-popup {
+      z-index: 99999;
+    }
+  }
+
+  @media(max-width:450px){
+
+    .popup__title {
+      font-size: calc(24px + 16 * (100vw / 1425));
+      top: 100px;
+    }
+
+    .popup__img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  
+}

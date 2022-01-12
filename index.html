@@ -129,7 +129,7 @@
 
                                 <!-- второе под-меню -->
 
-                                <ul class="secondsubnavigation__list accordion-content">
+                                <ul style="z-index: -1;" class="secondsubnavigation__list accordion-content">
 
                                     <li class="secondsubnavigation__list-item">
                                         <a title="let's play :) " target="_blank"
@@ -179,6 +179,11 @@
 
                             </li>
 
+                            <li class="navigation__list-items  diable_list-items">
+                                <a class="navigation__list-links QR" href="#">QR</a>
+
+                            </li>
+
 
 
 
@@ -207,6 +212,33 @@
 
 
         </header>
+
+
+        <div class="popup__box">
+
+
+
+            <div class="popup__box-popup">
+
+                <div class="close">
+
+                    <i class="far fa-times-circle close__cross"></i>
+
+                </div>
+
+                <div class="popupImg__box">
+
+                    <h2 class="popup__title">Check my QR Code and Be in touch with Me!</h2>
+
+                    <img class="popup__img" title="scan QR with camera" src="img/MyQr.jpg" alt="QR">
+
+                </div>
+
+
+            </div>
+
+
+        </div>
 
 
 
@@ -296,6 +328,7 @@
 
 
     <script defer src="src/js/script.min.js"></script>
+    <script src="src/js/popup.js"></script>
     <script defer src="src/jquery/jquery.js"></script>
 </body>
 
