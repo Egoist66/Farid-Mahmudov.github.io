@@ -315,6 +315,9 @@
     .popup__title {
       font-size: calc(24px + 16 * (100vw / 1425));
       top: 100px;
+      margin-left: -23px;
+      word-wrap: break-word;
+      white-space:pre-line;
     }
 
     .popup__img {
