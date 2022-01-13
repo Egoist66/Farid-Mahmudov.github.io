@@ -7,7 +7,7 @@ var close__cross = $('.close__cross');
 QR.click(function (e) {
     e.preventDefault();
     popup__box.fadeToggle(500);
-    popup__box.toggleClass('active');
+    popup__box.addClass('active');
 
 })
 
