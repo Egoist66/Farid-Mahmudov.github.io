@@ -286,45 +286,16 @@
       -webkit-transition: all 0.3s ease;
       transition: all 0.3s ease;
     }
-  }
-  
-
-  @media(max-width:1395px){
-    .popup__title {
-      top: 10px;
-    }
-
-    .close__cross {
+    .QR__li {
       display: none;
-  }
-
-  @media(max-width:679px){
-
-    .popup__img {
-      margin-left: -52px;
     }
-
 
     .popup__box-popup {
-      z-index: 99999;
+      display: none;
+    }
+
+    .popup__box {
+      display: none;
     }
   }
-
-  @media(max-width:450px){
-
-    .popup__title {
-      font-size: calc(24px + 16 * (100vw / 1425));
-      top: 100px;
-      margin-left: -23px;
-      word-wrap: break-word;
-      white-space:pre-line;
-    }
-
-    .popup__img {
-      width: 200px;
-      height: 200px;
-    }
-  }
-
   
-}
