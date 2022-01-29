@@ -5,8 +5,33 @@ var content = document.querySelector('#content');
 var createhtml = document.querySelector('.newhtml');
 var li = document.querySelectorAll('li');
 var copy = document.querySelector('.codeCopy');
+var watch_result = document.querySelector('.watch_result');
+var doc = document.innerHTML;
+var html = document.querySelector('html');
 
 // main Page Scripts
+
+
+watch_result.addEventListener('click', function () {
+
+
+    var newelem = document.createElement('div');
+    newelem.innerHTML = content.value;
+    html.innerHTML = newelem.innerHTML;
+    document.title = 'Result Page'
+
+
+
+    console.log(newelem);
+
+
+
+
+
+
+});
+
+
 
 document.querySelector('.button').addEventListener('click', function () {
     let file = document.getElementById('file').files[0];
@@ -96,7 +121,6 @@ document.querySelector('.downLoad').onclick = function () {
         return false;
     }
 };
-
 
 
 
