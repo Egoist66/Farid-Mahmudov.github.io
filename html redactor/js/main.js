@@ -107,6 +107,7 @@ copy.addEventListener('click', function () {
 
 reset.addEventListener('click', function () {
     content.value = '';
+    localStorage.clear();
 })
 
 document.querySelector('.downLoad').onclick = function () {
