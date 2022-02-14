@@ -18,7 +18,8 @@ watch_result.addEventListener('click', function () {
     var newelem = document.createElement('div');
     newelem.innerHTML = content.value;
     html.innerHTML = newelem.innerHTML;
-    document.title = 'Result Page'
+    document.title = 'Result Page';
+
 
 
 
