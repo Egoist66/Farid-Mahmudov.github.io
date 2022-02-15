@@ -19,19 +19,22 @@ var positionedLi2 = $('.positionedLi2');
 var subnavigation__serialList = $('.subnavigation__serialList');
 
 
+
 var header = $('header');
 var themeEl_p = $('p');
 var themeEl_title = [$('h2'), $('h3')];
-var themeEl_p = $('p');
+var person = $('.person');
+var td = $('td');
+var th = $('th');
+var modrow = $('.mod');
+
+var eleArr = [themeEl_title, themeEl_p, td, th, modrow];
 
 themeEl_title[0].addClass('bright');
 themeEl_title[1].addClass('bright');
 themeEl_p.addClass('bright');
-
-
-
-
-
+td.addClass('bright');
+th.addClass('bright');
 
 
 
@@ -45,6 +48,8 @@ themeEl_p.addClass('bright');
 //    links including
 
 var mainLink = $('.mainlink');
+var commomLink1 = $('#commonLink1');
+console.log(commomLink1.innerHTML);
 
 $(document).ready(function () {
 
@@ -52,6 +57,10 @@ $(document).ready(function () {
 
     mainLink.each(function () {
         $(this).attr('href', '../index.html');
+    })
+
+    commomLink1.each(function (){
+        $(this).attr('href', '../serials/breakingBad.html');
     })
 
 
@@ -62,14 +71,13 @@ $(document).ready(function () {
 
    $('.theme').click(function (){
        $(this).toggleClass('active');
-      themeEl_title[0].toggleClass('active');
-       themeEl_title[1].toggleClass('active');
-       themeEl_p.toggleClass('active');
+        $(eleArr).each(function (e){
+            $(this).toggleClass('active');
+
+        })
 
 
-
-
-   })
+   });
 
 
 
@@ -146,6 +154,10 @@ var sendButton = document.getElementById('feedbackButton');
 var styleInput = document.querySelectorAll('.styleinput');
 var body = document.querySelector('body');
 var Theme = document.querySelector('.theme');
+var arrowicon = document.querySelector('.arrowicon');
+
+
+
 
 
 
@@ -160,11 +172,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     body.classList.add('body');
 
+
     Theme.addEventListener('click', () => {
         body.classList.toggle('active');
+        arrowicon.classList.toggle('white');
+
+
+
        // window.localStorage.theme = body.className;
 
     })
+
+
     // document.body.className = localStorage.theme;
 
 
@@ -190,8 +209,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     sendButton.addEventListener('click', function (event) {
 
         let newEl = document.createElement('div');
-        newEl.className = 'newEl';
-
         let date = new Date();
 
         function currentTime() {
@@ -202,10 +219,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         newEl.innerHTML = ` <div class="feedBack__block">
         
-                    <div class="feedBack__block-element">
+                    <div class="feedBack__block-element posElement">
         
                         <p class="person">${feedbackInput.value} <span>${currentTime()}</span></p>
-                        <p>
+                        <p id="person">
                             ${feedBackField.value}
                         </p>
         
