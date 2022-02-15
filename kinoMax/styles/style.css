@@ -255,8 +255,8 @@ td, th { padding: 15px; }
 
 .avengersrow { background-color: #F9F9F9; }
 
-.inter { width: 70px; height: 80px; float: left; border-radius: 3px; -webkit-transition: 0.5s all ease; transition: 0.5s all ease; }
-.inter:hover { opacity: 0.8; -webkit-transition: 0.5s all ease; transition: 0.5s all ease; -webkit-transform: scale(1.046); transform: scale(1.046); overflow: hidden; }
+.inter1 { width: 70px; height: 80px; float: left; border-radius: 3px; -webkit-transition: 0.5s all ease; transition: 0.5s all ease; }
+.inter1:hover { opacity: 0.8; -webkit-transition: 0.5s all ease; transition: 0.5s all ease; -webkit-transform: scale(1.046); transform: scale(1.046); overflow: hidden; }
 
 .intertitle { margin-left: 100px; color: #F0AD4E; }
 
