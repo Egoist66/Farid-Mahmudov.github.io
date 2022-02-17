@@ -1307,3 +1307,14 @@ td,th {
         background-color: #2C3A48;
         @include  transition();
     }
+
+    .paragraph {
+        margin-bottom: 30px;
+        color: #2C3A48;
+        @include  transition();
+    }
+
+    .active.paragraph {
+        color: white;
+        @include  transition();
+    }

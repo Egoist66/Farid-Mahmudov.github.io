@@ -27,29 +27,55 @@ var person = $('.person');
 var td = $('td');
 var th = $('th');
 var modrow = $('.mod');
+var paragraph = $('.paragraph');
 
-var eleArr = [themeEl_title, themeEl_p, td, th, modrow];
 
 themeEl_title[0].addClass('bright');
 themeEl_title[1].addClass('bright');
 themeEl_p.addClass('bright');
 td.addClass('bright');
 th.addClass('bright');
+paragraph.addClass('bright');
+
+
+var eleArr = [themeEl_title, themeEl_p, td, th, modrow, paragraph];
 
 
 
-    var themeBlock = `<div class="theme__block">
+
+var themeBlock = `<div class="theme__block">
                         <div class="theme"></div>  
                      </div>
                       `
-    header.prepend(themeBlock);
+header.prepend(themeBlock);
 
 
 //    links including
 
 var mainLink = $('.mainlink');
 var commomLink1 = $('#commonLink1');
-console.log(commomLink1.innerHTML);
+var nameinput = $('.nameinput');
+var lasnameinput = $('.lastnameinput');
+var feedbackarea = $('.feedbackarea');
+
+
+
+
+var inputsArray = [nameinput, lasnameinput, feedbackarea];
+var sendButton = $('#feedbacksend');
+var empty = '';
+
+function reset() {
+    inputsArray.forEach(input => {
+        input.val(empty);
+    })
+
+}
+
+sendButton.click(function () {
+    setTimeout(reset, 500);
+
+})
 
 $(document).ready(function () {
 
@@ -59,7 +85,7 @@ $(document).ready(function () {
         $(this).attr('href', '../index.html');
     })
 
-    commomLink1.each(function (){
+    commomLink1.each(function () {
         $(this).attr('href', '../serials/breakingBad.html');
     })
 
@@ -69,15 +95,17 @@ $(document).ready(function () {
 
     $('body').addClass('body');
 
-   $('.theme').click(function (){
-       $(this).toggleClass('active');
-        $(eleArr).each(function (e){
+    $('.theme').click(function () {
+        $(this).toggleClass('active');
+        $(eleArr).each(function (e) {
             $(this).toggleClass('active');
 
         })
 
+        paragraph.toggleClass('active');
 
-   });
+
+    });
 
 
 
@@ -168,7 +196,7 @@ var arrowicon = document.querySelector('.arrowicon');
 
 
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
 
     body.classList.add('body');
 
@@ -179,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 
-       // window.localStorage.theme = body.className;
+        // window.localStorage.theme = body.className;
 
     })
 
@@ -234,14 +262,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         let inputs = [feedBackField, feedbackInput];
 
-        if(feedbackInput && feedBackField.value ==  '' || null){
+        if (feedbackInput && feedBackField.value == '' || null) {
             newEl = null;
             inputs.forEach(input => {
                 input.style.boxShadow = 'none';
                 input.style.border = '1px solid red';
 
             })
-        }else {
+        } else {
             first_fbBlock.insertBefore(newEl, first_fbBlock.previousElementSibling);
             event.preventDefault();
 

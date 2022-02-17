@@ -263,3 +263,7 @@ td, th { padding: 15px; }
 .mod { -webkit-transition: 0.5s all ease; transition: 0.5s all ease; }
 
 .active.mod { background-color: #2C3A48; -webkit-transition: 0.5s all ease; transition: 0.5s all ease; }
+
+.paragraph { margin-bottom: 30px; color: #2C3A48; -webkit-transition: 0.5s all ease; transition: 0.5s all ease; }
+
+.active.paragraph { color: white; -webkit-transition: 0.5s all ease; transition: 0.5s all ease; }
