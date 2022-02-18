@@ -1,3 +1,298 @@
-@charset "UTF-8";
+/* @charset "UTF-8";
 /* CSS Document */
 
+
+
+
+@media(max-width:1207px){
+    .logo {
+        text-align: center;
+        margin-top: 30px;
+        transition: 0.3s all ease;
+    }
+
+    .logo > p {
+        margin-bottom: 20px;
+    }
+
+    .active.navigation {
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .films__box {
+        justify-content: center;
+    }
+
+    .main > h2 {
+        text-align: center;
+    }
+
+    /*.main > p {*/
+    /*    width: 30%;*/
+    /*    text-align: center;*/
+    /*}*/
+}
+
+@media(max-width: 1201px){
+    .films__wrapper {
+        padding: 0 15px;
+    }
+
+
+
+}
+
+@media(max-width: 1182px) {
+    .feedBack__form {
+        padding: 0 15px;
+    }
+
+    .paragraph {
+        text-align: center;
+
+    }
+}
+
+@media(max-width: 500px){
+    .feedBack__form .feedBack__button-box {
+        justify-content: center!important;
+
+    }
+
+    .feedBack__button-box #feedbacksend {
+        width: 100% !important;
+        padding: 20px;
+        border-radius: 15px;
+    }
+}
+
+
+
+@media(max-width: 787px){
+    .films__wrapper .films__descr {
+        word-break: break-word;
+        max-width: 400px;
+
+    }
+
+    .films__wrapper-imgBox {
+        margin-right: 13px;
+    }
+
+
+}
+
+@media(max-width: 599px){
+
+
+    .films__wrapper-imgBox {
+        margin-right: 13px;
+    }
+
+   /*.films__wrapper .films__wrapper-block {*/
+   /*     width: 460px;*/
+   /*     margin: 0 auto 40px auto;*/
+   /* }*/
+
+    .imgbox__title {
+        display: none;
+    }
+
+
+}
+
+@media(max-width: 491px){
+
+
+
+    .films__wrapper-imgBox {
+        margin-right: 13px;
+    }
+
+    .films__buttonBox {
+        justify-content: center!important;
+       margin-top: 25px;
+    }
+
+
+
+
+
+}
+
+
+@media(max-width: 1197px){
+    .main > .films__descr-box {
+        align-items: center;
+    }
+
+    .films__descr-box > p {
+        width: 85%;
+    }
+
+    .films__descr-box > .button__box {
+        justify-content: center;
+        margin-top: 30px;
+    }
+}
+
+@media(max-width:1160px) {
+
+    body, html {
+        position: static;
+        overflow-x: hidden;
+
+    }
+
+    .header__section {
+
+        position: static !important;
+        z-index: 0;
+    }
+}
+
+ @media(max-width: 873px) {
+
+     .films__box-items {
+         width: 180px;
+         height: 270px;
+         margin: 0 auto;
+     }
+
+ }
+ @media(max-width: 844px) {
+        .films__box-items {
+            width: 150px;
+            height: 230px;
+            margin: 0 auto;
+        }
+
+       .main > .films__box {
+            column-gap: 0;
+        }
+ }
+
+ @media(max-width: 809px) {
+     .films__descr-box > .interstellar {
+         font-size: 24px;
+     }
+ }
+ @media(max-width: 761px) {
+    .main > .films__box {
+        grid-template-columns: repeat(4, 179px);
+
+    }
+ }
+
+@media(max-width: 697px) {
+    .main > .films__box {
+        display: flex;
+        flex-flow: wrap;
+    }
+
+    .films__box > .films__box-items {
+        padding: 0 7px;
+        margin: 0 10px;
+    }
+}
+
+@media(max-width: 679px) {
+
+    .films__box > .films__box-items:nth-child(2) {
+
+        margin-bottom: 26px;
+        transition: 0.3s all ease;
+    }
+}
+
+@media(max-width: 652px) {
+    .main > .films__descr-box {
+        word-break: break-all;
+    }
+    .films__descr-box2 > .actorSpeech {
+        width: 320px;
+    }
+}
+
+@media(max-width: 490px) {
+
+   .header__section .header {
+        height: 200px;
+       transition: 0.5s all ease;
+    }
+
+   .navigation .navigation__list {
+       display: block;
+       transform: scale(0);
+       transition: scale 0.2s ease;
+       opacity: 1;
+   }
+   
+
+    ul.navigation__list li {
+        margin-bottom: 20px;
+    }
+
+    .theme__block > .nav-toggle {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .container > .logo > h1 {
+        font-size: 35px;
+    }
+
+
+
+
+}
+
+@media(max-width: 339px) {
+    
+    .films__box > .films__box-items:nth-child(2) {
+
+        margin-bottom: 26px;
+
+    }
+
+    .films__box > .films__box-items {
+        margin-bottom: 26px;
+    }
+}
+
+@media(max-width: 335px) {
+    .films__descr-box > .interstellar {
+        word-break: break-all;
+        font-size: 19px;
+    }
+
+    .films__descr-box2 > .actorSpeech {
+        word-break: break-all;
+        font-size: 19px;
+        width: 14rem;
+    }
+}
+
+@media(max-width: 247px) {
+    .films__descr-box > .interstellar {
+        word-break: break-all;
+        font-size: 19px;
+        width: 8rem;
+    }
+
+    .films__descr-box2 > .actorSpeech {
+        word-break: break-all;
+        font-size: 19px;
+        width: 14rem;
+    }
+}
+
+
+
+ 

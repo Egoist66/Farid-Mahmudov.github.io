@@ -1,16 +1,3 @@
 @charset "UTF-8";
 /* CSS Document */
 
-@media(max-width:1160px){
-
-    body,html {
-        position: static;
-        overflow-x: hidden;
-    }
-
-    .header__section {
-
-        position: static !important;
-        z-index: 0;
-    }
-}
