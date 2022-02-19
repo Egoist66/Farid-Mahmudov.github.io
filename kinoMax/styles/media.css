@@ -75,6 +75,10 @@
     .renderfeedbackBlock {
         padding: 0 10px!important;
     }
+
+    .feedBack__form {
+        padding: 0 15px;
+    }
 }
 
 
@@ -327,6 +331,15 @@
        transition: 0.5s all ease;
     }
 
+    .preloader {
+        left: 44% !important;
+
+    }
+
+    .preloader > img {
+        width: 60px!important;
+    }
+
    .navigation .navigation__list {
        display: block;
        transform: scale(0);
@@ -393,6 +406,16 @@
     }
 }
 
+@media(max-width: 768px) {
+    .preloader {
+        left: 43% !important;
+        top: 34%;
 
+    }
+
+    .preloader > img {
+        width: 90px!important;
+    }
+}
 
  
