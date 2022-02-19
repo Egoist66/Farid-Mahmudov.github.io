@@ -289,17 +289,17 @@ downSidebar.innerHTML = `
                     <div style="background: none" class="search__box sidebarbox">
                         <form target="_blank" method="get" action="https://fe.it-academy.by/TestForm.php?"
                             class="form__box">
-                            <h2 style="background: none; text-align: center" class="search_title">Search</h2>
+                            <h2 style="background: none; text-align: center; color: silver" class="search_title">Search</h2>
                             <div style="width: 100%" class="input__box">
                                 <input 
                                 style="width: 70%; border: 1px solid orange; border-right: none; margin: 0 -53px " 
                                 class="downinput" name="search" placeholder="Enter your query" required type="search">
-                                <button style="border: 1px solid orange; border-left: none " type="submit" class="search downsearchbtn"><i class="fas fa-search search_icon"></i></button>
+                                <button style="border: 1px solid orange; border-left: none; background-color: orange " type="submit" class="search downsearchbtn"><i class="fas fa-search search_icon"></i></button>
                             </div>
                         </form>
                     </div>
                     <div style="background: none" class="enter__box sidebarbox">
-                        <h2 style="text-align: center; background: none">LogIn</h2>
+                        <h2 style="text-align: center; background: none; color: silver">LogIn</h2>
                         <form method="get" action="https://fe.it-academy.by/TestForm.php?" class="enter__form">
                             <div class="input__enter-box">
                                 <input autocomplete="on" required placeholder="Enter your Email" type="email">
@@ -312,10 +312,10 @@ downSidebar.innerHTML = `
                         </form>
                     </div>
                     <div style="background: none" class="news__box sidebarbox">
-                        <h2 style="text-align: center; background: none">News</h2>
+                        <h2 style="text-align: center; background: none; color: silver">News</h2>
                         <div class="news__text">
                             <p>03.02.2022</p>
-                            <p class="lastP">We launched our new service</p>
+                            <p style="font-size: 20px;" class="lastP">We launched our new service</p>
                         </div>
                     </div>
                 	`;
