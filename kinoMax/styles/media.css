@@ -5,6 +5,13 @@
 
 
 @media(max-width:1207px){
+    .main > .downsidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        text-align: center;
+    }
     .logo {
         text-align: center;
         margin-top: 30px;
