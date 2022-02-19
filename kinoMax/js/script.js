@@ -275,6 +275,7 @@ var list = document.querySelector('.navigation__list');
 var header = document.querySelector('.header');
 var subnavFilmList = document.querySelector('.subnavigation__filmList');
 var aside = document.querySelector('.sidebar');
+var header__section = document.querySelector('.header__section');
 // aside.id = 'aside';
 // aside.classList.add('downsidebar');
 //
@@ -333,26 +334,31 @@ Main.appendChild(downSidebar);
 
 document.addEventListener("DOMContentLoaded", function (event) {
 
-		// window.addEventListener('resize', () => {
-		// 	if(window.outerWidth <=1207){
-		// 		Main.insertAdjacentHTML('afterend', appearaside);
-		// 		return;
-		// 	}
-		//
-		//
-		// })
 
+	// header__section.addEventListener('click', (event) => {
+	// 		if(event.target.className == 'nav-toggle' || 'bgspan'){
+	// 			list.classList.toggle('show');
+	// 			header.classList.toggle('active');
+	//
+	// 		}else if(event.target.className !== 'nav-toggle' || 'bgspan'){
+	// 			list.classList.remove('show');
+	// 			header.classList.remove('active');
+	//
+	// 		}else {
+	// 			console.log('error');
+	// 		}
+	// });
 
-	Burger.addEventListener('click', (e) => {
+	Burger.addEventListener('click', (event) => {
+
 		Burger.classList.toggle('active');
-		// list.style.display = 'block'
 
 		bgspan.forEach(item => {
 			item.classList.toggle('active');
 		})
-
 		list.classList.toggle('show');
 		header.classList.toggle('active');
+
 
 	})
 
@@ -361,12 +367,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		arrowicon.classList.toggle('white');
 
 
-		// window.localStorage.theme = body.className;
-
 	});
-
-
-	// document.body.className = localStorage.theme;
 
 
 	window.onscroll = () => {
@@ -380,60 +381,66 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
+	sendButton.addEventListener('click', function (event) {
+
+		let newEl = document.createElement('div');
+		let date = new Date();
+
+		function currentTime() {
+			let resultTime = date.toDateString();
+
+			return resultTime;
+		}
+
+		newEl.innerHTML = ` <div class="feedBack__block renderfeedbackBlock">
+
+					<div  class="feedBack__block-element posElement">
+		
+						<p class="person">${feedbackInput.value} <span>${currentTime()}</span></p>
+						<p id="person">
+							${feedBackField.value}
+						</p>
+		
+					</div>
+		
+					</div>`;
+
+
+		window.localStorage.setItem('block', newEl.innerHTML);
+
+		let inputs = [feedBackField, feedbackInput];
+
+		if (feedbackInput && feedBackField.value == '' || null) {
+			newEl = null;
+			inputs.forEach(input => {
+				input.style.boxShadow = 'none';
+				input.style.border = '1px solid red';
+
+			});
+		} else {
+			 main__feedBack.insertAdjacentHTML('afterend', newEl.innerHTML);
+			event.preventDefault();
+
+			inputs.forEach(input => {
+
+				input.value = '';
+				input.style.border = '1px solid silver';
+			});
+
+		}
+	});
+
+
+
 });
 
 
-sendButton.addEventListener('click', function (event) {
 
-	let newEl = document.createElement('div');
-	let date = new Date();
-
-	function currentTime() {
-		let resultTime = date.toDateString();
-
-		return resultTime;
-	}
-
-	newEl.innerHTML = ` <div class="feedBack__block">
-	
-				<div class="feedBack__block-element posElement">
-	
-					<p class="person">${feedbackInput.value} <span>${currentTime()}</span></p>
-					<p id="person">
-						${feedBackField.value}
-					</p>
-	
-				</div>
-	
-				</div>`;
-
-	window.localStorage.setItem('block', newEl.innerHTML);
-
-	let inputs = [feedBackField, feedbackInput];
-
-	if (feedbackInput && feedBackField.value == '' || null) {
-		newEl = null;
-		inputs.forEach(input => {
-			input.style.boxShadow = 'none';
-			input.style.border = '1px solid red';
-
-		});
-	} else {
-		first_fbBlock.insertBefore(newEl, first_fbBlock.previousElementSibling);
-		event.preventDefault();
-
-		inputs.forEach(input => {
-
-			input.value = '';
-			input.style.border = '1px solid silver';
-		});
-
-	}
 
 
 	// main__feedBack.prepend(newEl);
 
-});
+
 
 
 

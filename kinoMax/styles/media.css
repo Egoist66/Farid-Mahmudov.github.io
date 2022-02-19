@@ -71,6 +71,10 @@
     .main > .main__feedBack {
         padding: 0 15px;
     }
+
+    .renderfeedbackBlock {
+        padding: 0 10px!important;
+    }
 }
 
 
@@ -147,7 +151,7 @@
 }
 
 @media(max-width: 1182px) {
-    
+
 
     .paragraph {
         text-align: center;
