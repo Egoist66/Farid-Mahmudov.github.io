@@ -280,7 +280,9 @@ button.nav-toggle { padding: 10px; background: transparent; border: 1px solid tr
 
 .active.bgspan { background-color: white; -webkit-transition: 0.3s all ease; transition: 0.3s all ease; }
 
-.show.navigation__list { display: block !important; -webkit-transform: scale(1) !important; transform: scale(1) !important; -webkit-transition: 0.5s all ease !important; transition: 0.5s all ease !important; }
+.show.navigation__list { display: block; -webkit-transform: scale(1) !important; transform: scale(1) !important; -webkit-transition: 0.5s all ease !important; transition: 0.5s all ease !important; }
+
+.show.navigation__list li { margin-bottom: 20px !important; }
 
 .active.header { height: 399px; -webkit-transition: 0.5s all ease; transition: 0.5s all ease; }
 

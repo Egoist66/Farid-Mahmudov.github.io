@@ -418,4 +418,14 @@
     }
 }
 
- 
+@media(min-width: 490px) {
+   .show.navigation__list  {
+        display: flex!important;
+    }
+
+    .active.header {
+        height: 299px!important;
+    }
+
+}
+

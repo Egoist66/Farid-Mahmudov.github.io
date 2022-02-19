@@ -1367,11 +1367,13 @@ td,th {
   transition: 0.3s all ease;
 }
 .show.navigation__list {
-  display: block!important;
+  display: block;
   transform: scale(1.0)!important;
   transition: 0.5s all ease!important;
 
-
+}
+.show.navigation__list li {
+  margin-bottom: 20px !important;
 }
 
 .active.header {
