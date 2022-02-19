@@ -157,6 +157,24 @@ sendButton.click(function () {
 
 $(document).ready(function () {
 
+	function preloader() {
+		preloader__box.toggleClass('active');
+	}
+
+	setTimeout(preloader, 200);
+
+
+	function time() {
+
+
+		sidebar.toggleClass('active');
+		main.toggleClass('active');
+		navigation.toggleClass('active');
+
+	}
+
+	setTimeout(time, 200);
+
 
 
 	// Links
@@ -188,23 +206,6 @@ $(document).ready(function () {
 	});
 
 
-	function preloader() {
-		preloader__box.toggleClass('active');
-	}
-
-	setTimeout(preloader, 200);
-
-
-	function time() {
-
-
-		sidebar.toggleClass('active');
-		main.toggleClass('active');
-		navigation.toggleClass('active');
-
-	}
-
-	setTimeout(time, 200);
 
 	isShownBtn.on('click', 'a', function (event) {
 		event.preventDefault();
