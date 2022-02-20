@@ -456,18 +456,27 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-	sendButton.addEventListener('click', function (event) {
 
-		let newEl = document.createElement('div');
-		let date = new Date();
 
-		function currentTime() {
-			let resultTime = date.toDateString();
 
-			return resultTime;
-		}
 
-		newEl.innerHTML = ` <div class="feedBack__block renderfeedbackBlock">
+});
+
+
+
+
+sendButton.addEventListener('click', function (event) {
+
+	let newEl = document.createElement('div');
+	let date = new Date();
+
+	function currentTime() {
+		let resultTime = date.toDateString();
+
+		return resultTime;
+	}
+
+	newEl.innerHTML = ` <div class="feedBack__block renderfeedbackBlock">
 
 					<div  class="feedBack__block-element posElement">
 		
@@ -481,45 +490,29 @@ document.addEventListener("DOMContentLoaded", function (event) {
 					</div>`;
 
 
-		window.localStorage.setItem('block', newEl.innerHTML);
+	window.localStorage.setItem('block', newEl.innerHTML);
 
-		let inputs = [feedBackField, feedbackInput];
+	let inputs = [feedBackField, feedbackInput];
 
-		if (feedbackInput && feedBackField.value == '' || null) {
-			newEl = null;
-			inputs.forEach(input => {
-				input.style.boxShadow = 'none';
-				input.style.border = '1px solid red';
+	if (feedbackInput && feedBackField.value == '' || null) {
+		newEl = null;
+		inputs.forEach(input => {
+			input.style.boxShadow = 'none';
+			input.style.border = '1px solid red';
 
-			});
-		} else {
-			 main__feedBack.insertAdjacentHTML('afterend', newEl.innerHTML);
-			event.preventDefault();
+		});
+	} else {
+		main__feedBack.insertAdjacentHTML('afterend', newEl.innerHTML);
+		event.preventDefault();
 
-			inputs.forEach(input => {
+		inputs.forEach(input => {
 
-				input.value = '';
-				input.style.border = '1px solid silver';
-			});
+			input.value = '';
+			input.style.border = '1px solid silver';
+		});
 
-		}
-	});
-
-
-
+	}
 });
-
-
-	console.log(navlinks[0]);
-
-
-	// main__feedBack.prepend(newEl);
-
-
-
-
-
-
 
 
 
