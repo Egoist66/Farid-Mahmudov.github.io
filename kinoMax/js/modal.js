@@ -63,13 +63,16 @@ function clear(){
 
 
 
-
+let html = document.querySelector('html');
+html.classList.add('html');
+console.log(html);
 
 document.querySelectorAll('.login_button').forEach(button => {
 	button.addEventListener('click', function (event){
 		event.preventDefault();
 		modalwrapper.classList.add('active');
 		setTimeout(delayShowModal, 300);
+		html.classList.add('modal');
 	})
 })
 
@@ -82,7 +85,7 @@ document.querySelector('.cross').addEventListener('click', function(event){
 
 	setTimeout(delayHideModal, 300);
 	modalwrapper.classList.remove('active');
-	body.style.overflowY = 'hidden';
+	html.classList.remove('modal');
 
 
 });
@@ -96,7 +99,7 @@ regButton.addEventListener('click', function (event){
 document.addEventListener('click', function (event){
 	if(event.target.className == 'modal__wrapper active'){
 		modalwrapper.classList.remove('active');
-		body.style.overflowY = 'scroll';
+		html.classList.remove('modal');
 	}
 });
 
