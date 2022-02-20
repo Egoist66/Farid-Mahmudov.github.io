@@ -284,6 +284,8 @@ button.nav-toggle { padding: 10px; background: transparent; border: 1px solid tr
 
 .show.navigation__list li { margin-bottom: 20px !important; }
 
-.active.header { height: 399px; -webkit-transition: 0.5s all ease; transition: 0.5s all ease; }
+.active.header { height: 430px; -webkit-transition: 0.5s all ease; transition: 0.5s all ease; }
 
 .downsidebar { display: none; width: 100%; }
+
+.langBox { position: relative; cursor: pointer; }

@@ -1377,13 +1377,20 @@ td,th {
 }
 
 .active.header {
-  height: 399px;
+  height: 430px;
   transition: 0.5s all ease;
+
 }
 
 .downsidebar {
   display: none;
   width: 100%;
+
+}
+
+.langBox {
+  position: relative;
+  cursor: pointer;
 
 }
 

@@ -327,8 +327,13 @@
 @media(max-width: 490px) {
 
    .header__section .header {
-        height: 200px;
+        height: 210px;
        transition: 0.5s all ease;
+    }
+
+    .langBox {
+        bottom: -140px;
+        left: -10px;
     }
 
     .preloader {
@@ -365,6 +370,19 @@
 
 
 }
+
+
+
+@media(max-width: 333px) {
+    .header__section > .header {
+        height: 240px;
+    }
+    .langBox {
+        bottom: -187px;
+    }
+}
+
+
 
 @media(max-width: 339px) {
     
@@ -426,6 +444,8 @@
     .active.header {
         height: 299px!important;
     }
+
+
 
 }
 

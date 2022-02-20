@@ -277,6 +277,34 @@ var header = document.querySelector('.header');
 var subnavFilmList = document.querySelector('.subnavigation__filmList');
 var aside = document.querySelector('.sidebar');
 var header__section = document.querySelector('.header__section');
+var films__Box = document.querySelector('.films__box');
+navlinks = document.querySelectorAll('.navigation__list-links');
+var translatedtitle = document.querySelector('.translatedtitle');
+var seocndtranslatedtitle = document.querySelector('.translatedsecondtitle');
+var thirdtranslatedtitle = document.querySelector('.thirdtranslatedtitle');
+var fourthtranslatedtitle = document.querySelector('.fourthtranslatedtitle');
+var subthirdtitle = document.querySelector('.subthirdtitle');
+var subfourthtitle = document.querySelector('.subfourthtitle');
+var translatedread = document.querySelector('.translatedread');
+var logotext = document.querySelector('.logo > p');
+
+var h2 = document.querySelector('.main > h2');
+
+	// массив для перевода
+	var translatedArr = [
+		logotext,
+		translatedtitle,
+		seocndtranslatedtitle,
+		thirdtranslatedtitle,
+		subthirdtitle,
+		translatedread,
+		fourthtranslatedtitle,
+		subfourthtitle,
+
+	];
+
+
+
 // aside.id = 'aside';
 // aside.classList.add('downsidebar');
 //
@@ -335,20 +363,66 @@ Main.appendChild(downSidebar);
 
 document.addEventListener("DOMContentLoaded", function (event) {
 
+	// var script = document.createElement('script');
+	// script.src = "js/multilang.js";
+	// console.log(script);
+	// body.appendChild(script);
 
-	// header__section.addEventListener('click', (event) => {
-	// 		if(event.target.className == 'nav-toggle' || 'bgspan'){
-	// 			list.classList.toggle('show');
-	// 			header.classList.toggle('active');
-	//
-	// 		}else if(event.target.className !== 'nav-toggle' || 'bgspan'){
-	// 			list.classList.remove('show');
-	// 			header.classList.remove('active');
-	//
-	// 		}else {
-	// 			console.log('error');
-	// 		}
-	// });
+	let langdiv = document.createElement('div');
+	langdiv.classList.add('langBox');
+
+	langdiv.innerHTML = ` <select class="select" 
+ 	style="background: transparent; color: white; border-radius: 4px; padding: 4px; cursor: pointer" name="select">
+                        <option value="ru">RU</option>
+                        <option selected value="en">EN</option>
+                    </select>`;
+
+
+
+	header.prepend(langdiv);
+	header.style.position = 'relative';
+
+	let Select = document.querySelector('.select');
+	let  allLang = ['en', 'ru', ];
+	navlinks.forEach(link => {
+		link.classList.add('translated');
+	})
+
+	function changeURLLanguage(){
+		let lang = Select.value;
+		location.href = window.location.pathname + '#' + lang;
+		location.reload();
+	}
+
+	function changeLangugage(){
+		let hash = window.location.hash;
+		hash = hash.substr(1);
+		if(!allLang.includes(hash)){
+			location.href = window.location.pathname + '#en';
+			location.reload()
+		}
+
+		console.log(hash);
+		Select.value = hash;
+		// navlinks[0].innerHTML = langArr["nav"][hash][0];
+		for(let i = 0; i< navlinks.length; i++){
+
+		window.localStorage.setItem('lang', JSON.stringify(langArr['nav']));
+			navlinks[i].innerHTML = langArr["nav"][hash][i];
+		}
+
+			for(let i = 0; i < translatedArr.length; i++){
+				translatedArr[i].innerHTML = langArr["title"][hash][i];
+			}
+
+
+
+	}
+
+
+	Select.addEventListener('change', changeURLLanguage);
+
+	changeLangugage();
 
 	Burger.addEventListener('click', (event) => {
 
@@ -436,7 +510,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 
-
+	console.log(navlinks[0]);
 
 
 	// main__feedBack.prepend(newEl);
