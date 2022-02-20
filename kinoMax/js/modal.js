@@ -11,9 +11,9 @@ modalwrapper.innerHTML =
     			<div class="modal__items-box">
     				<form target="_blank" method="post" action=https://fe.it-academy.by/TestForm.php?" class="regform">
     				
-    				 <input name="name" placeholder="Enter your name" type="text">
+    				 <input required name="name" placeholder="Enter your name" type="text">
 	          <br>
-	          <input name="email" placeholder="Enter your email" type="email">
+	          <input required name="email" placeholder="Enter your email" type="email">
 	          <br>
 	          <input name="password" class="lastreginput" required autocomplete="current-password" minlength="4" maxlength="10"
 	         
