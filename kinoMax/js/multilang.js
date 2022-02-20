@@ -28,3 +28,62 @@ var langArr = {
 	},
 };
 
+
+
+let langdiv = document.createElement('div');
+langdiv.classList.add('langBox');
+
+langdiv.innerHTML = ` <select class="select" 
+ 	style="background: transparent; color: white; border-radius: 4px; padding: 4px; cursor: pointer" name="select">
+                        <option value="ru">RU</option>
+                        <option selected value="en">EN</option>
+                    </select>`;
+
+
+
+header.prepend(langdiv);
+header.style.position = 'relative';
+
+let Select = document.querySelector('.select');
+let  allLang = ['en', 'ru', ];
+navlinks.forEach(link => {
+	link.classList.add('translated');
+})
+
+function changeURLLanguage(){
+	let lang = Select.value;
+	location.href = window.location.pathname + '#' + lang;
+	location.reload();
+}
+
+function changeLangugage(){
+	let hash = window.location.hash;
+	hash = hash.substr(1);
+	if(!allLang.includes(hash)){
+		location.href = window.location.pathname + '#en';
+		location.reload()
+	}
+
+	console.log(hash);
+	Select.value = hash;
+	// navlinks[0].innerHTML = langArr["nav"][hash][0];
+	for(let i = 0; i< navlinks.length; i++){
+
+		window.localStorage.setItem('lang', JSON.stringify(langArr['nav']));
+		navlinks[i].innerHTML = langArr["nav"][hash][i];
+	}
+
+	for(let i = 0; i < translatedArr.length; i++){
+		translatedArr[i].innerHTML = langArr["title"][hash][i];
+	}
+
+
+
+}
+
+
+Select.addEventListener('change', changeURLLanguage);
+
+changeLangugage();
+
+

@@ -354,75 +354,9 @@ Main.appendChild(downSidebar);
 
 
 
-
-
-// Links including
-
-// var mainlink = document.querySelectorAll('.mainlink');
-
-
 document.addEventListener("DOMContentLoaded", function (event) {
 
-	// var script = document.createElement('script');
-	// script.src = "js/multilang.js";
-	// console.log(script);
-	// body.appendChild(script);
 
-	let langdiv = document.createElement('div');
-	langdiv.classList.add('langBox');
-
-	langdiv.innerHTML = ` <select class="select" 
- 	style="background: transparent; color: white; border-radius: 4px; padding: 4px; cursor: pointer" name="select">
-                        <option value="ru">RU</option>
-                        <option selected value="en">EN</option>
-                    </select>`;
-
-
-
-	header.prepend(langdiv);
-	header.style.position = 'relative';
-
-	let Select = document.querySelector('.select');
-	let  allLang = ['en', 'ru', ];
-	navlinks.forEach(link => {
-		link.classList.add('translated');
-	})
-
-	function changeURLLanguage(){
-		let lang = Select.value;
-		location.href = window.location.pathname + '#' + lang;
-		location.reload();
-	}
-
-	function changeLangugage(){
-		let hash = window.location.hash;
-		hash = hash.substr(1);
-		if(!allLang.includes(hash)){
-			location.href = window.location.pathname + '#en';
-			location.reload()
-		}
-
-		console.log(hash);
-		Select.value = hash;
-		// navlinks[0].innerHTML = langArr["nav"][hash][0];
-		for(let i = 0; i< navlinks.length; i++){
-
-		window.localStorage.setItem('lang', JSON.stringify(langArr['nav']));
-			navlinks[i].innerHTML = langArr["nav"][hash][i];
-		}
-
-			for(let i = 0; i < translatedArr.length; i++){
-				translatedArr[i].innerHTML = langArr["title"][hash][i];
-			}
-
-
-
-	}
-
-
-	Select.addEventListener('change', changeURLLanguage);
-
-	changeLangugage();
 
 	Burger.addEventListener('click', (event) => {
 
@@ -455,28 +389,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	};
 
 
+	sendButton.addEventListener('click', function (event) {
 
+		let newEl = document.createElement('div');
+		let date = new Date();
 
+		function currentTime() {
+			let resultTime = date.toDateString();
 
+			return resultTime;
+		}
 
-
-});
-
-
-
-
-sendButton.addEventListener('click', function (event) {
-
-	let newEl = document.createElement('div');
-	let date = new Date();
-
-	function currentTime() {
-		let resultTime = date.toDateString();
-
-		return resultTime;
-	}
-
-	newEl.innerHTML = ` <div class="feedBack__block renderfeedbackBlock">
+		newEl.innerHTML = ` <div class="feedBack__block renderfeedbackBlock">
 
 					<div  class="feedBack__block-element posElement">
 		
@@ -490,29 +414,39 @@ sendButton.addEventListener('click', function (event) {
 					</div>`;
 
 
-	window.localStorage.setItem('block', newEl.innerHTML);
+		window.localStorage.setItem('block', newEl.innerHTML);
 
-	let inputs = [feedBackField, feedbackInput];
+		let inputs = [feedBackField, feedbackInput];
 
-	if (feedbackInput && feedBackField.value == '' || null) {
-		newEl = null;
-		inputs.forEach(input => {
-			input.style.boxShadow = 'none';
-			input.style.border = '1px solid red';
+		if (feedbackInput && feedBackField.value == '' || null) {
+			newEl = null;
+			inputs.forEach(input => {
+				input.style.boxShadow = 'none';
+				input.style.border = '1px solid red';
 
-		});
-	} else {
-		main__feedBack.insertAdjacentHTML('afterend', newEl.innerHTML);
-		event.preventDefault();
+			});
+		} else {
+			main__feedBack.insertAdjacentHTML('afterend', newEl.innerHTML);
+			event.preventDefault();
 
-		inputs.forEach(input => {
+			inputs.forEach(input => {
 
-			input.value = '';
-			input.style.border = '1px solid silver';
-		});
+				input.value = '';
+				input.style.border = '1px solid silver';
+			});
 
-	}
+		}
+	});
+
+
+
+
 });
+
+
+
+
+
 
 
 
