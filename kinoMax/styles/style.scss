@@ -399,6 +399,22 @@ html {
       }
     }
 
+   .logbutton {
+     padding: 10px 20px;
+     background-color: #F0AD4E;
+     color: white;
+     font-size: 16px;
+     border: none;
+     border-radius: 5px;
+     @include transition();
+     letter-spacing: 1px;
+
+     &:hover {
+       background-color: #f39512;
+       @include transition();
+     }
+   }
+
     .button_box {
       @include Flex();
       justify-content: space-between;
@@ -1391,6 +1407,107 @@ td,th {
 .langBox {
   position: relative;
   cursor: pointer;
+
+}
+
+.modal__wrapper {
+  background-color: #2C3A47;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  height: 0%;
+  width: 0%;
+  z-index: 999;
+  opacity: 0.97;
+  transform: scale(0);
+  transition: 0.3s all ease;
+
+
+
+  .modal {
+    background: orange;
+    transform: scale(0);
+    min-height: 400px;
+    width: 60%;
+    padding: 20px 50px;
+    border-radius: 10px;
+    transition: 0.3s all ease;
+    position: relative;
+  }
+}
+
+.active.modal {
+  transform: scale(1.0)!important;
+  transition: 0.3s all ease!important;
+}
+
+.active.modal__wrapper {
+  background-color: #2C3A47;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  opacity: 0.97;
+  transform: scale(1.0);
+  transition: 0.3s all ease;
+
+}
+
+.modal__items-box {
+  text-align: center;
+  margin: 100px 0px;
+
+
+  & input {
+    margin-bottom: 30px;
+    padding: 15px 20px;
+    border-radius: 7px;
+    border: none;
+    width: 100%;
+  }
+
+
+  & button {
+    margin-top: 30px;
+    border: none;
+    width: 300px;
+    padding: 15px 0px;
+    background-color: #2C3A47;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    letter-spacing: 1px;
+
+    &:hover {
+      background-color: black;
+    }
+
+  }
+}
+
+.cross {
+
+  position: absolute;
+  left: -280px;
+  top: -170px;
+
+  .close__cross {
+    font-size: 80px;
+    color: orange;
+    cursor: pointer;
+
+
+    &:active {
+      color: white;
+    }
+  }
 
 }
 

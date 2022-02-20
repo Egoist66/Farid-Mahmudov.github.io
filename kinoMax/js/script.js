@@ -335,8 +335,8 @@ downSidebar.innerHTML = `
                                 <input autocomplete="on" required placeholder="Enter your Email" type="email">
                                 <input required placeholder="Enter your Password" type="password">
                                 <div class="button_box">
-                                    <button value="registered" type="submit" class="login_button">Sign Up</button>
-                                    <button value="logged in" type="submit" class="login_button">Log In</button>
+                                    <button onclick="showmodal()" value="registered" type="submit" class="login_button">Sign Up</button>
+                                    <button value="logged in" type="submit" class="logbutton">Log In</button>
                                 </div>
                             </div>
                         </form>
@@ -350,6 +350,8 @@ downSidebar.innerHTML = `
                     </div>
                 	`;
 Main.appendChild(downSidebar);
+
+
 
 
 
