@@ -514,6 +514,27 @@
     }
 }
 
+/* profile */
+
+@media(max-width:1201px){
+    .userdata__box {
+        margin: 0 15px;
+        text-align: center;
+    }
+
+    .userdatabtn__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width:303px){
+    .userimg {
+        width: 180px;
+    }
+}
+
 
 
 
