@@ -105,12 +105,41 @@ document.addEventListener('click', function (event) {
 	}
 });
 
+var nameInput = document.querySelector('.firstreginput');
+var emailInput = document.querySelector('.secondreginput');
+var passwordInput = document.querySelector('.thirdreginput');
+
+function  Modalcheck(){
+
+	document.querySelector('.login__button').addEventListener('click', function (event) {
+		event.preventDefault();
+		modalwrapper.classList.add('active');
+		setTimeout(delayShowModal, 300);
+		html.classList.add('modal');
+	})
+
+	if (regButton) {
+		setTimeout(clear, 200);
+	}
+
+	document.addEventListener('click', function (event) {
+		if (event.target.className == 'modal__wrapper active') {
+			modalwrapper.classList.remove('active');
+			html.classList.remove('modal');
+			setTimeout(clear, 200);
+		}
+	});
+
+	OpenCabinet()
+
+
+
+}
+
+
 
 function OpenCabinet() {
 
-	let nameInput = document.querySelector('.firstreginput');
-	let emailInput = document.querySelector('.secondreginput');
-	let passwordInput = document.querySelector('.thirdreginput');
 
 	let adminData = {
 
@@ -130,7 +159,7 @@ function OpenCabinet() {
 		alert('You entered nothing');
 
 	} else {
-		setTimeout(location.reload(), 1000);
+
 		regInputs.forEach(input => {
 			input.style.border = '3px solid red';
 		});
@@ -138,19 +167,13 @@ function OpenCabinet() {
 		alert('Invalid data!');
 	}
 
-
-
-
-
 }
 
 regButton.addEventListener('click', function () {
 	setTimeout(clear, 200);
 	OpenCabinet()
 
-})
-
-
+});
 
 
 
