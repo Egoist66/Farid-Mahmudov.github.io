@@ -121,8 +121,7 @@ function OpenCabinet() {
 
 
 	if (nameInput.value == adminData.name && passwordInput.value == adminData.password.toString()) {
-		location.href = '../cabinet/profile.html'
-
+		window.open('cabinet/profile.html');
 
 
 
