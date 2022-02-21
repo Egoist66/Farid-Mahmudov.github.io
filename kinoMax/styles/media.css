@@ -536,6 +536,27 @@
 }
 
 
+@media(max-width: 520px){
+    .modal__wrapper .modal {
+        max-width: 90% !important;
+    }
+}
+
+@media(max-width: 356px) {
+    .modal__items-box button  {
+        width: 180px!important;
+    }
+
+}
+
+@media(max-width: 314px) {
+    .modal__items-box button  {
+        width: 130px!important;
+    }
+
+}
+
+
 
 
 

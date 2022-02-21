@@ -9,7 +9,7 @@ modalwrapper.innerHTML =
 									<i class="far fa-times-circle close__cross"></i>
 						</div>
     			<div class="modal__items-box">
-    				<form target="_blank" method="post" action=https://fe.it-academy.by/TestForm.php?" class="regform">
+    				<form target="_blank" action="#" class="regform">
     				
     				 <input class="firstreginput" required name="name" placeholder="Enter your name" type="text">
 	          <br>
