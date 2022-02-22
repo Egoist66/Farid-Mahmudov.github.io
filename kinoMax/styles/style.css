@@ -320,3 +320,5 @@ label { margin-bottom: 15px; width: 200px; display: block; text-align: center; }
 .resetimg { border: none; width: 200px; }
 
 .posElement { margin-bottom: 30px !important; }
+
+.vibrate { -webkit-animation-name: vibrate-fast !important; animation-name: vibrate-fast !important; -webkit-animation-duration: 1s !important; animation-duration: 1s !important; -webkit-animation-timing-function: ease !important; animation-timing-function: ease !important; -webkit-animation-delay: 0s !important; animation-delay: 0s !important; -webkit-animation-iteration-count: 1 !important; animation-iteration-count: 1 !important; -webkit-animation-direction: normal !important; animation-direction: normal !important; -webkit-animation-fill-mode: none !important; animation-fill-mode: none !important; }

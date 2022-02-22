@@ -1558,3 +1558,14 @@ label {
 .posElement {
   margin-bottom: 30px!important;
 }
+
+.vibrate {
+
+  animation-name: vibrate-fast!important;
+  animation-duration: 1s!important;
+  animation-timing-function: ease!important;
+  animation-delay: 0s!important;
+  animation-iteration-count: 1!important;
+  animation-direction: normal!important;
+  animation-fill-mode: none!important;
+}

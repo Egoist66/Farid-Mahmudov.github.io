@@ -53,6 +53,7 @@ function showmodal() {
 function clear() {
 	regInputs.forEach(reginput => {
 		reginput.value = '';
+		reginput.style.border = 'none';
 	})
 }
 
@@ -87,13 +88,17 @@ document.querySelector('.cross').addEventListener('click', function (event) {
 	modalwrapper.classList.remove('active');
 	html.classList.remove('modal');
 	setTimeout(clear, 200);
+	regInputs.forEach(input => {
+		input.classList.remove('vibrate');
+	});
+
 
 
 });
 
 regButton.addEventListener('click', function (event) {
 	if (regButton) {
-		setTimeout(clear, 200);
+		setTimeout(clear, 300);
 	}
 })
 
@@ -101,7 +106,8 @@ document.addEventListener('click', function (event) {
 	if (event.target.className == 'modal__wrapper active') {
 		modalwrapper.classList.remove('active');
 		html.classList.remove('modal');
-		setTimeout(clear, 200);
+		setTimeout(clear, 300);
+
 	}
 });
 
@@ -119,14 +125,17 @@ function  Modalcheck(){
 	})
 
 	if (regButton) {
-		setTimeout(clear, 200);
+		setTimeout(clear, 300);
 	}
 
 	document.addEventListener('click', function (event) {
 		if (event.target.className == 'modal__wrapper active') {
 			modalwrapper.classList.remove('active');
 			html.classList.remove('modal');
-			setTimeout(clear, 200);
+			regInputs.forEach(input => {
+				input.style.border = 'none';
+			});
+			setTimeout(clear, 300);
 		}
 	});
 
@@ -156,24 +165,34 @@ function OpenCabinet() {
 
 
 	} else if (nameInput.value == '' && passwordInput.value == '') {
-		alert('You entered nothing');
 
-	} else {
+		regInputs.forEach(input => {
+			input.classList.toggle('vibrate');
+		});
 
+	}else if(nameInput.value !== adminData.name && passwordInput.value !== adminData.password.toString()){
+
+		regInputs.forEach(input => {
+			input.classList.toggle('vibrate');
+		});
 		regInputs.forEach(input => {
 			input.style.border = '3px solid red';
 		});
 
-		alert('Invalid data!');
+
+	}else {
+		console.log('error');
 	}
 
 }
 
 regButton.addEventListener('click', function () {
-	setTimeout(clear, 200);
 	OpenCabinet()
+	setTimeout(clear, 300);
+
 
 });
+
 
 
 
