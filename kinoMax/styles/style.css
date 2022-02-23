@@ -2,6 +2,7 @@
 @import url("myNormilize.css");
 @import url("keyframes.css");
 @import url("font.css");
+@import url("support.css");
 ::-moz-selection { background-color: #f0ad4e; }
 ::selection { background-color: #f0ad4e; }
 

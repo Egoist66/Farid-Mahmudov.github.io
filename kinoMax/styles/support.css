@@ -1,0 +1,142 @@
+
+@import url('style.css');
+
+
+
+.chat__wrapper {
+    border-top: 1px solid orange;
+    max-width: 280px;
+    border-radius: 7px;
+    transform: translateX(-265px);
+    transition: 0.5s all ease;
+    position: fixed;
+    top: 255px;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+
+
+.chat {
+    height: inherit;
+    width: 100%;
+}
+
+.chat__output {
+    min-height: 250px;
+    border-bottom: 1px solid orange;
+    background-color: orange;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    overflow: auto;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+
+}
+
+
+
+.chat__greeting > p {
+    writing-mode: vertical-rl;
+    padding: 15px;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.labelinput {
+    text-align: left!important;
+    margin-bottom: 0px!important;
+    width: 100%;
+    display: block!important;
+    padding: 15px;!important;
+    border-bottom: 1px solid orange!important;
+    background-color: orange;
+
+
+
+}
+
+.chat__inputbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.chat__inputbox > input {
+    width: 100%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid orange;
+    min-height: 150px;
+    padding: 10px;
+    letter-spacing: 1px;
+}
+
+.chat__button {
+    text-align: center;
+    width: 100%;
+    border: none;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px ;
+    padding: 15px;
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+}
+
+.chat__button:hover {
+    background-color: #f5b651;
+}
+
+.chat__greeting:hover {
+
+    cursor: pointer;
+}
+
+.chat__wrapper:hover {
+    transform: translateX(3px);
+    transition: 0.5s all ease;
+}
+
+.attach {
+    vertical-align: super;
+    display: inline-block;
+    margin-left: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+
+.attach:hover {
+    text-decoration: underline 1px solid white;
+}
+
+.active.output__text {
+    background-color: #2C3A47;
+    padding: 4px 20px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.chat__output > h2 {
+    position: relative;
+}
+
+.chat__output > h2:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    display: block;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    right: 180px;
+    top: 3px;
+    animation: lightOnline 1s alternate infinite;
+}

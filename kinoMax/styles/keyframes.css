@@ -36,3 +36,14 @@
         transform: translate(0);
     }
 }
+
+@keyframes lightOnline {
+    0% {
+        background-color: #669966;
+    }
+
+    100% {
+        background-color: greenyellow;
+    }
+
+}
