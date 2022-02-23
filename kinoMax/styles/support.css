@@ -24,16 +24,20 @@
 }
 
 .chat__output {
-    min-height: 250px;
+    height: 280px;
     border-bottom: 1px solid orange;
+    overflow: auto;
     background-color: orange;
     color: white;
     width: 100%;
     padding: 10px;
-    overflow: auto;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
 
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: orange!important;
 }
 
 
@@ -136,7 +140,12 @@
     background-color: green;
     border-radius: 50%;
     position: absolute;
-    right: 180px;
+    right: 160px;
     top: 3px;
     animation: lightOnline 1s alternate infinite;
 }
+
+.none.chat__wrapper {
+    display: none!important;
+}
+

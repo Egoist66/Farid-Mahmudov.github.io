@@ -22,6 +22,10 @@ html { overflow-x: hidden; }
 
 body, html { font-family: 'Roboto'; -webkit-box-sizing: border-box; box-sizing: border-box; position: relative; -webkit-transition: 0.5s all ease; transition: 0.5s all ease; }
 
+*::-webkit-scrollbar { width: 16px; background-color: white; border-radius: 7px; }
+
+*::-webkit-scrollbar-thumb { width: 16px; background-color: orange; }
+
 .header__section { width: 100%; height: auto; position: -webkit-sticky; position: sticky; top: 0px; z-index: 10; }
 
 .content__section { width: 100%; height: auto; margin-bottom: 100px; }

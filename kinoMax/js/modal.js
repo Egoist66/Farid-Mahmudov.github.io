@@ -74,6 +74,7 @@ document.querySelectorAll('.login_button').forEach(button => {
 		modalwrapper.classList.add('active');
 		setTimeout(delayShowModal, 300);
 		html.classList.add('modal');
+		document.querySelector('.chat__wrapper').classList.add('none');
 	})
 })
 
@@ -91,6 +92,7 @@ document.querySelector('.cross').addEventListener('click', function (event) {
 	regInputs.forEach(input => {
 		input.classList.remove('vibrate');
 	});
+	document.querySelector('.chat__wrapper').classList.remove('none');
 
 
 
@@ -107,6 +109,7 @@ document.addEventListener('click', function (event) {
 		modalwrapper.classList.remove('active');
 		html.classList.remove('modal');
 		setTimeout(clear, 300);
+		document.querySelector('.chat__wrapper').classList.remove('none');
 
 	}
 });
@@ -139,7 +142,7 @@ function  Modalcheck(){
 		}
 	});
 
-	OpenCabinet()
+
 
 
 
@@ -189,6 +192,7 @@ function OpenCabinet() {
 regButton.addEventListener('click', function () {
 	OpenCabinet()
 	setTimeout(clear, 300);
+
 
 
 });
