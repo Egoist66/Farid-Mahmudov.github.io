@@ -9,7 +9,7 @@ modalwrapper.innerHTML =
 									<i class="far fa-times-circle close__cross"></i>
 						</div>
     			<div class="modal__items-box">
-    				<form target="_blank" action="#" class="regform">
+    				<form  class="regform">
     				
     				 <input class="firstreginput" required name="name" placeholder="Enter your name" type="text">
 	          <br>
@@ -186,6 +186,8 @@ function OpenCabinet() {
 	}else {
 		console.log('error');
 	}
+
+
 
 }
 
