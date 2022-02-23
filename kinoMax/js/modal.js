@@ -15,11 +15,11 @@ modalwrapper.innerHTML =
 	          <br>
 	          <input class="secondreginput" required name="email" placeholder="Enter your email" type="email">
 	          <br>
-	          <input class="thirdreginput" name="password" class="lastreginput" required autocomplete="current-password" minlength="4" maxlength="10"
+	          <input class="thirdreginput" name="password" class="lastreginput" required  minlength="4" maxlength="10"
 	         
 	           placeholder="Create password " type="password">
 	           <br>
-	 	         <button name="registered" value="true" type="submit" class="reg_button">Register</button>		
+	 	         <button name="registered" value="true" type="button" class="reg_button">Register</button>		
     				
     				
 						</form>
