@@ -42,20 +42,27 @@ function dateData() {
 
 document.querySelector('.chat__button').addEventListener('click', function (event) {
 	event.preventDefault();
-	let time = new Date();
-	time.toDateString();
-	let newElement = document.createElement('p');
-	newElement.classList.add('output__text');
-	newElement.classList.add('active');
-	let result = document.querySelector('.input__message').value;
-	document.querySelector('.chat__output').append(newElement);
-	newElement.innerHTML = result + '<br><br>' + time.toDateString() + '<br><br>';
 
+
+	if(!document.querySelector('.input__message').value == ''){
+		let time = new Date();
+		time.toDateString();
+		let newElement = document.createElement('p');
+		newElement.classList.add('output__text');
+		newElement.classList.add('active');
+		newElement.contentEditable = 'true';
+		let result = document.querySelector('.input__message').value;
+		document.querySelector('.chat__output').append(newElement);
+		newElement.innerHTML = result + '<br><br>' + time.toDateString() + '<br><br>';
+
+	}
 
 	setTimeout(200, inputClear());
 
 
 });
+
+
 
 function inputClear() {
 	document.querySelector('.input__message').value = '';

@@ -556,6 +556,13 @@
 
 }
 
+@media(max-height: 652px) {
+    .chat__wrapper {
+        top: 85px!important;
+    }
+
+}
+
 
 
 

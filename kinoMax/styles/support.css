@@ -76,10 +76,10 @@ body::-webkit-scrollbar-thumb {
     border-top: none;
     border-right: none;
     border-left: none;
-    border-bottom: 1px solid orange;
     min-height: 150px;
     padding: 10px;
     letter-spacing: 1px;
+    border-bottom: none;
 }
 
 .chat__button {
