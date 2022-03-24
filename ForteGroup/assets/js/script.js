@@ -176,7 +176,7 @@ mobileMap_wrapper.insertAdjacentHTML('afterbegin', `<div class="map-wrapper">
 console.log(mobileMap_wrapper);
 
 
-if (window.outerWidth <= 1386) {
+if (window.outerWidth < 351) {
 
     location_section.prepend(mobileMap_wrapper);
 

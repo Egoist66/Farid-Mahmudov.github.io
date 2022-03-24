@@ -4,12 +4,11 @@
 /* mobile version */
 
 @media(max-width:1386px){
-    .locations-map {
-        display: none;
-    }
+    
 
     .locations {
-        justify-content: center;
+        align-items: center !important;
+        flex-direction: column;
     }
 }
 
@@ -19,6 +18,24 @@
     .header-navigation {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+@media(max-width: 1306px){
+
+    .footer-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-signUp {
+        flex-direction: column !important;
+        align-items: center !important;
+        margin-right: 0px !important;
+    }
+    .signUp__text {
+        text-align: center;
+        width: auto !important;
     }
 }
 
@@ -99,6 +116,18 @@
     }
 }
 
+@media(max-width:764px){
+  .locations-countries  .locations__delivery {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .disabled_country {
+        display: none;
+    }
+}
+
 @media(max-width:749px){
 
     .header-navigation__list {
@@ -106,6 +135,49 @@
         width: 420px;
     }
 
+}
+
+@media(max-width:692px){
+    .footer-social {
+        flex-direction: column-reverse;
+        padding-bottom: 30px;
+        
+    }
+
+    .footer__company_media {
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width:636px){
+    .map  .map_frame {
+        height: 485px;
+        width: 400px;
+    }
+}
+
+@media(max-width:547px){
+    .footer-navigation {
+        
+        padding-top: 38px !important;
+    }
+
+   
+    
+}
+
+@media(max-width:546px){
+    .footer-navigation {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .footer-navigation .footer-navigation__list {
+        margin-right: 0px;
+    }
+
+    
 }
 
 @media(max-width:530px){
@@ -166,6 +238,14 @@
 
 }
 
+@media(max-width:428px){
+    .map  .map_frame {
+        height: 400px;
+        width: 300px;
+    }
+}
+
+
 
 @media(max-width:427px){
     .form-inputs > input {
@@ -201,6 +281,36 @@
     }
 }
 
+@media(max-width:423px){
+
+    .banner p {
+        font-size: 19px !important;
+    }
+    .banner__linkBox a {
+        width: 221px !important;
+    }
+}
+
+@media(max-width:351px){
+    .locations-map {
+        display: none !important;    
+    }
+
+    .welcome-section {
+        padding-bottom: 150px;
+    }
+
+    .locations-countries {
+        padding-top: 0px !important;
+    }
+
+    .locations {
+        padding-bottom: 0px !important;
+    }
+}
+
+
+
 @media(max-width:340px){
     .form-inputs > input {
         width: 260px !important;
@@ -220,6 +330,13 @@
         width: 200px !important;
     }
 }
+
+
+
+
+
+
+
 
 
 /* for wide screens */

@@ -815,7 +815,7 @@ input::-webkit-input-placeholder {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+   padding-bottom: 30px;
 }
 
 .footer__company_media {
@@ -965,10 +965,11 @@ input::-webkit-input-placeholder {
 
     display: flex;
     justify-content: center;
+    transform: translateY(-130px);
 
     .map_frame {
-        width: 600px;
-        height: 400px;
-        transform: translateY(-71px);
+        width: 300px;
+        height: 300px;
+        
     }
 }
