@@ -1,0 +1,265 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* mobile version */
+
+@media(max-width:1386px){
+    .locations-map {
+        display: none;
+    }
+
+    .locations {
+        justify-content: center;
+    }
+}
+
+
+@media(max-width: 1309px){
+
+    .header-navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width:1053px){
+
+    .form-inputsBox {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-inputs:nth-child(2){
+        margin-left: 0px !important;
+    }
+
+    .message-inputbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .message-inputbox > input {
+        width: 500px;
+    }
+}
+
+@media(max-width:1007px){
+
+    .agreement-block {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .agreement-block::before {
+        top: 24px !important;
+        left: -20px !important;
+        
+    }
+}
+
+
+
+@media(max-width:995px){
+/* 
+    .header {
+        position: static !important;
+        background: transparent !important;
+    } */
+
+    .header-navigation__list {
+
+        flex-flow: wrap !important;
+        align-items: center;
+    }
+
+    
+
+    .header-navigation__list > li {
+        margin-bottom: 30px;
+    }
+
+    .header-navigation__logo {
+        margin-bottom: 30px;
+    }
+
+   
+}
+
+@media(max-width:948px){
+
+    .button_li {
+        margin: 0 auto !important ;
+    }
+}
+
+@media(max-width:815px){
+    .agreement-block {
+        margin: 0 15px;
+    }
+}
+
+@media(max-width:749px){
+
+    .header-navigation__list {
+
+        width: 420px;
+    }
+
+}
+
+@media(max-width:530px){
+    .form-inputs > input {
+        width: 400px !important;
+        margin:  0 auto;
+    }
+
+    .forms-inputs_disabled {
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    .message-inputbox > input {
+        width: 400px;
+    }
+    .file_label {
+        font-size: 14px !important;
+    }
+
+    .main-form_title  {
+        font-size: 30px !important;
+    }
+}
+
+@media(max-width: 500px){
+
+    
+
+  .header-navigation  .header-navigation__list {
+      
+       display: none;
+    }
+
+   
+
+    .header {
+        padding: 0px;
+    }
+
+    .header-navigation {
+        flex-direction: row;
+        padding: 15px 0px;
+    }
+
+   .header-navigation .menu-burger {
+        display: block;
+    }
+
+    .header-navigation__logo  img {
+        width: 90px;
+        height: 30px;
+    }
+
+    .header-navigation__logo {
+        margin-bottom: 0px;
+    }
+
+}
+
+
+@media(max-width:427px){
+    .form-inputs > input {
+        width: 329px !important;
+        margin:  0 auto;
+    }
+
+    .welcome-section {
+
+        background:  url('../images/layer3.png') no-repeat -730px 150px, url('../images/mediaBG.png') center fixed  no-repeat !important;
+        background-color: #031D31 !important;
+        background-size: cover !important;
+    }
+
+    .forms-inputs_disabled {
+        width: 329px;
+        margin: 0 auto;
+    }
+
+   .file_label .files_params {
+        font-size: 10px;
+    }
+
+    .message-inputbox > input {
+        width: 329px;
+    }
+    .file_label {
+        font-size: 14px !important;
+    }
+
+    .main-form_title  {
+        font-size: 30px !important;
+    }
+}
+
+@media(max-width:340px){
+    .form-inputs > input {
+        width: 260px !important;
+        margin:  0 auto;
+    }
+
+    .forms-inputs_disabled {
+        width: 260px;
+        margin: 0 auto;
+    }
+
+    .message-inputbox > input {
+        width: 260px;
+    }
+
+    .submit-button_box button {
+        width: 200px !important;
+    }
+}
+
+
+/* for wide screens */
+
+@media(min-width:1800px){
+    .map_frame {
+        width: 700px !important;
+    }
+
+    .locations__country-emailLink {
+        font-size: 18px !important;
+    }
+}
+
+/* @media(min-width:1920px){
+   .container {
+       max-width: 1890px !important;
+      
+
+   }
+} */
+
+@media(min-width:1600px){
+
+    .container {
+        max-width: 1390px !important;
+        padding: 0px !important;
+
+    }
+}
+
+
+@media(min-width:500px){
+    .active.mobile-menu {
+        display: none !important;
+    }
+}
+
+@media(min-width: 1387px){
+    .mobile-map {
+        display: none !important;
+    }
+}
