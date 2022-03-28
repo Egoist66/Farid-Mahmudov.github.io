@@ -132,6 +132,8 @@
     .subnavigation__list {
       padding: 11px 30px;
       min-width: 320px;
+      height: auto !important;
+      overflow: auto !important;
     }
   
     .navigation__list {

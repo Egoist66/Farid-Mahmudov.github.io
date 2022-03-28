@@ -453,10 +453,10 @@ footer {
 
     position: absolute;
     list-style: none;
-    background-color: #232428;
-    
+    background-color: #232428; 
     align-items: center;
-    
+    overflow: auto;
+    height: 300px;
     left: -44px;
     display: none;
     border-radius: 5px;
