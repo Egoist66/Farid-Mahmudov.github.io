@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/app.css" rel="stylesheet" />
+    <script defer src="js/app.min.js"></script>
+  </head>
+  <body>
+    <datalist id="shadows">
+      <option value="1px 1px 1px #000"></option>
+      <option value="2px 2px 2px #000"></option>
+      <option value="3px 2px 2px #333"></option>
+      <option value="1px 1px 2px #fff"></option>
+      <option value="3px 3px 3px #9e3"></option>
+      <option value=" 0 0 5px 2px red"></option>
+      <option value="0 0 5px 2px"></option>
+      <option value="0 0 5px"></option>
+      <option value="inset 0 0 6px"></option>
+      <option value="0.4em 0.4em 5px rgba(122,122,122,0.5)"></option>
+    </datalist>
+
+    <header>
+      <div class="app-wrapper">
+        <div class="app-title">
+          <h1>CSS Generator</h1>
+        </div>
+      </div>
+    </header>
+
+    <div class="app-wrapper">
+      <div id="app">
+        <div class="color-input inputs">
+          <label for="color">Colorpicker: </label>
+          <input type="color" name="color" id="color" />
+
+          <div class="color-out">
+            <p class="color" title="цвет">color:</p>
+            <div class="img">
+              <img class="copy style" src="images/copy2.webp" alt="" />
+            </div>
+
+            <p class="bg_color" title="цвет фона">background:</p>
+
+            <div class="img">
+              <img class="copy_bg style" src="images/copy2.webp" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="font-input inputs">
+          <label for="font">Font and Shadow: </label>
+          <input
+            value="16"
+            class="fontSize font_inputs"
+            min="12"
+            placeholder="font-size"
+            type="number"
+            name="fz"
+            id="font"
+          />
+          <input
+            class="fontWeight font_inputs"
+            min="300"
+            max="900"
+            placeholder="font-weight"
+            type="number"
+            name="fw"
+          />
+          <input
+            class="letter font_inputs"
+            min="0"
+            placeholder="letter-spacing"
+            type="number"
+            name="letter-spacing"
+          />
+          <input
+            list="shadows"
+            class="textShadow font_inputs"
+            placeholder="text-shadow"
+            type="text"
+            name="text-shadow"
+          />
+          <input
+            list="shadows"
+            class="boxShadow font_inputs"
+            placeholder="box-shadow"
+            type="text"
+            name="box-shadow"
+          />
+
+          <div class="font-out">
+            <p title="цвет" размер шрифта>font-size:</p>
+            <p title="жирность шрифта">font-weight:</p>
+            <p title="расстояние между буквами">letter-spacing:</p>
+            <p title="тень текста">text-shadow:</p>
+            <p title="тень блока">box-shadow:</p>
+          </div>
+
+          <div class="img">
+            <img class="copy_font style" src="images/copy2.webp" alt="" />
+          </div>
+        </div>
+
+        <div class="border-input inputs">
+          <label for="border">border: </label>
+          <input
+            value="1"
+            min="0"
+            placeholder="border"
+            type="number"
+            name="border"
+            id="border"
+          />
+          <select name="border-types" id="borders">
+            <option value="solid">solid</option>
+            <option value="dashed">dashed</option>
+            <option value="dotted">dotted</option>
+            <option value="double">double</option>
+          </select>
+
+          <input
+            style="width: 60px; border: none"
+            type="color"
+            name="color"
+            id="border-color"
+          />
+
+          <div class="btn-gen">
+            <button style="margin-bottom: 30px" id="gen_border">Generate</button>
+          </div>
+
+          <label for="br">border-radius</label>
+          <input value="0" min="0" max="100" type="range" name="border-radius" id="br">
+
+       
+
+          <div class="border-out">
+            <p title="граница (размер тип цвет)">border:</p>
+            <p class="radius-out" title="закругление границы">border-radius:</p>
+          </div>
+
+          <div class="img">
+            <img class="copy_border style" src="images/copy2.webp" alt="" />
+          </div>
+        </div>
+
+        <div class="pad-marg-input inputs">
+          <label for="padding">Padding</label>
+          <input
+            class="pad-marg"
+            value="40"
+            min="0"
+            max="900"
+            type="range"
+            name="padding"
+            id="padding"
+          />
+          <label for="margin">Margin</label>
+          <input
+            class="pad-marg"
+            value="40"
+            min="-100"
+            max="100"
+            type="range"
+            name="margin"
+            id="margin"
+          />
+          <label for="max-width">Max-Width</label>
+          <input
+            class="max-width"
+            max="1590"
+            value="1590"
+            type="range"
+            name="max-width"
+            id="max-width"
+          />
+          <label for="height">Height</label>
+          <input
+            class="height"
+            max="2500"
+            min="0"
+            value="102"
+            type="range"
+            name="height"
+            id="height"
+          />
+
+          <div style="margin-bottom: 15px;" class="pad-marg-out">
+            <p title="внутренний отступ">padding:</p>
+            <p title="внешний отступ">margin:</p>
+            <p title="максимальная ширина">max-width:</p>
+            <p title="максимальная ширина">height:</p>
+          </div>
+
+          <div class="img">
+            <img class="copy_other style" src="images/copy2.webp" alt="" />
+          </div>
+        </div>
+
+        </div>
+
+      
+
+       
+      </div>
+
+     
+
+      <div class="app-test-area">
+        <div class="app-test-block">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>
