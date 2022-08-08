@@ -50,6 +50,9 @@ document.addEventListener('DOMContentLoaded', function(){
             case 'inline-flex':
                 outStyles = testArea.style.display = target.value;
                 break;
+            case 'none':
+                outStyles = testArea.style.display = target.value;
+                break;
             default:
                 console.log(new Error('Error'));    
                  
@@ -74,9 +77,27 @@ document.addEventListener('DOMContentLoaded', function(){
         else if(this.value === 'space-between' || this.value === 'space-around' || this.value === 'flex-end' || this.value === 'flex-start'){
             for(let i = 0; i < miniBlocks.length; i++){
 
-                miniBlocks[i].style.cssText = "margin: 0px";
+                miniBlocks[i].style.cssText = "margin: 20px 0px";
 
             }
+        }
+    }
+  
+    document.querySelector('#align-select').oninput = function(event){
+
+        testArea.style.cssText += `align-items: ${this.value}`;
+
+       
+    }
+
+    document.querySelector('#order').onchange = function(){
+
+        if(this.checked){
+
+            document.querySelector('.blocks_1').style.cssText = "order:1";
+        }
+        else {
+            document.querySelector('.blocks_1').style.cssText = "order:0";
         }
     }
   

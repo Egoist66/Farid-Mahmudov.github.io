@@ -239,7 +239,7 @@ input[type=range]  {
 
   .blocks_1 {
     width: 200px;
-    height: 200px;
+    height: 260px;
     background-color: red;
   }
 
@@ -311,6 +311,15 @@ input[type=range]  {
   }
   #inline-flex::after {
     content: 'display: inline-flex';
+    display: inline-block;
+    width: 200px;
+    color: white;
+    vertical-align: middle;
+    font-size: 22px;
+    margin-left: 90px;
+  }
+  #none::after {
+    content: 'display: none';
     display: inline-block;
     width: 200px;
     color: white;
