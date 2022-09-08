@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+    min-height: 1500px;
+}
+
+h1 {
+    padding-top: 30px;
+    padding-bottom: 100px;
+    color: crimson;
+}
+
+input {
+    width: 500px;
+}
+
+.out {
+    margin-top: 50px;
+    padding: 15px;
+    border: 1px solid #333;
+    max-width: 650px;
+    height: 550px;
+    overflow: auto;
+    outline: none !important;
+}
+
+.parse {
+    margin-left: 15px;
+}
+
+
+button {
+    display: block;
+    margin-top: 30px;
+}
+
+#fetch-input {
+    padding: 7px;
+    max-width: 650px !important;
+}
+
+select {
+    display: block;
+    width: 250px !important;
+    margin-top: 30px;
+}
+
+textarea {
+    resize: vertical;
+    margin-top: 30px;
+    height: 100px;
+    width: 500px;
+    padding: 10px;
+    display: none !important;
+    max-width: 650px !important;
+}
+
+.reset {
+    margin-left: 15px;
+}
+
+h3 {
+   margin-bottom: 50px;;
+}
+
+form {
+    border:  none !important;
+}
+
+label {
+    margin-left: 5px;
+}
+
+.response {
+    margin-top: 50px !important;
+    display: block;
+}
