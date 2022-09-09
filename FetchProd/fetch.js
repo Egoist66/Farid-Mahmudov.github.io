@@ -164,12 +164,14 @@ window.addEventListener('DOMContentLoaded', function(){
 
       let parsedFile = getJSON(file.files[0]);
 
-      body.innerHTML = await parsedFile;
       document.querySelector('#fetch-params').value = "POST";
+      body.innerHTML = await parsedFile;
+     
     }
     else {
-      alert("No file or File type error !! ");
       document.querySelector('#fetch-params').value = "POST";
+      alert("No file or File type error !! ");
+   
     }
 
    
