@@ -168,7 +168,8 @@ window.addEventListener('DOMContentLoaded', function(){
       document.querySelector('#fetch-params').value = "POST";
     }
     else {
-      alert("No file or File type error !! ")
+      alert("No file or File type error !! ");
+      document.querySelector('#fetch-params').value = "POST";
     }
 
    
