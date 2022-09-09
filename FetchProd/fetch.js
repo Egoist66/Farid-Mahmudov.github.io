@@ -93,6 +93,7 @@ window.addEventListener('DOMContentLoaded', function(){
         console.log(response.status);
 
         if (fetchParser.value === "text") {
+          out.innerHTML = '';
           data = await response.text();
           console.log(data);
 
@@ -102,7 +103,7 @@ window.addEventListener('DOMContentLoaded', function(){
           data = await response.json();
           console.log(data);
           for (let key in data) {
-            out.innerHTML += `<pre>${key}: ${JSON.stringify(data[key])}</pre>`;
+            out.innerHTML = `<pre>${key}: ${JSON.stringify(data[key])}</pre>`;
           }
         }
       } catch (e) {
