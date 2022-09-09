@@ -27,10 +27,12 @@ window.addEventListener('DOMContentLoaded', function(){
       method = this.value;
       body.style.cssText = "display: none !important";
       jsonreader.style.cssText = "display: none !important";
+      document.querySelector('.out').innerHTML = '';
     } else {
       method = this.value;
       body.style.cssText = "display: block !important";
       jsonreader.style.cssText = "display: block !important";
+      document.querySelector('.out').innerHTML = '';
     }
 
     return console.log(method);
