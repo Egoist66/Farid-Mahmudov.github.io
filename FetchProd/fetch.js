@@ -125,7 +125,9 @@ window.addEventListener('DOMContentLoaded', function(){
   document.querySelector(".reset").onclick = () => {
     const body = document.querySelector("#post-body");
     const jsonreader = document.querySelector("#inputGroupFile01");
+    body.innerHTML = '';
     document.querySelector(".out").innerHTML = "";
+ 
 
     body.style.cssText = "display: none !important";
     jsonreader.style.cssText = "display: none !important";
