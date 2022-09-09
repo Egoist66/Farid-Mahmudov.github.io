@@ -153,12 +153,22 @@ window.addEventListener('DOMContentLoaded', function(){
   }
 
   document.querySelector(".read").addEventListener("click", async function () {
+
     const body = document.querySelector("#post-body");
     let file = document.querySelector("#inputGroupFile01");
 
-    let parsedFile = getJSON(file.files[0]);
 
-    body.innerHTML = await parsedFile;
+    if((file.files[0] !== undefined || file.value !== '') && (file.files[0]?.type === 'application/json')){
+
+      let parsedFile = getJSON(file.files[0]);
+
+      body.innerHTML = await parsedFile;
+    }
+    else {
+      alert("No file or File type error !! ")
+    }
+
+   
   });
 
 
