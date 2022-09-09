@@ -17,6 +17,7 @@ window.addEventListener('DOMContentLoaded', function(){
           
   let method = "";
   const primary_method = document.querySelector("#fetch-params");
+  const fetchParser = document.querySelector("#fetch-parser");
   const form = document.querySelector("form");
 
   function observeSelect() {
@@ -40,6 +41,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
   primary_method.addEventListener("change", observeSelect);
 
+  
   fetchParser.onchange = function(){
     if(this.value === "application/json"){
     out.innerHTML = '';
