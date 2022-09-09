@@ -103,7 +103,7 @@ window.addEventListener('DOMContentLoaded', function(){
           data = await response.json();
           console.log(data);
           for (let key in data) {
-            out.innerHTML = `<pre>${key}: ${JSON.stringify(data[key])}</pre>`;
+            out.innerHTML += `<pre>${key}: ${JSON.stringify(data[key])}</pre>`;
           }
         }
       } catch (e) {
