@@ -1,108 +1,125 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>POSTMAHMAN</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
-</head>
+  <head>
+    <title>POSTMAHMAN</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon" />
+  </head>
 
-<body>
-
-  <datalist id="list">
-    
-    <option value="https://jsonplaceholder.typicode.com/todos">https://jsonplaceholder.typicode.com/todos</option>
-
-  </datalist>
-
+  <body>
+    <datalist id="list">
+      <option value="https://jsonplaceholder.typicode.com/todos">
+        https://jsonplaceholder.typicode.com/todos
+      </option>
+    </datalist>
 
     <div class="container">
-        <h1 class="text-center">Fetch - POST / GET service</h1>
-        <h3>For Best visual effect use Developers Tools - Console</h3>
-        <div class="row">
-            <div class="col-lg-12">
-              <form class="form form-control">
-
-                <div class="url">
-
-                  <input class="form-control" value="https://jsonplaceholder.typicode.com/todos" list="list" placeholder="Enter url address" type="text" name="fetch-url" id="fetch-input">
-
-                </div>
-
-                <div>
-
-                  <textarea class="form-control" placeholder="BODY" name="post-body" id="post-body">{"name": "Farid", "url": "http://google.com", "tag": "<div class='block'><p><b>Hello</b></p></div>"}</textarea>
-
-
-                </div>
-
-                <div>
-
-
-                  <input accept=".json" style="max-width: 250px !important; margin-top: 30px; color:#0B5ED7!important; display: none !important;" class="form-control reader" type="file" name="json" id="inputGroupFile01">
-
-                </div>
-
-                <select class="form-control" name="fetch-params" id="fetch-params">
-                  <option  value="GET">GET</option>
-                  <option value="POST">POST</option>
-
-                </select>
-
-               
-                <select class="form-control" name="fetch-type" id="fetch-type">
-                  <option selected value="application/json">Content-Type: application/json</option>
-                  <option selected value="application/text">Content-Type: application/text</option>
-
-                </select>
-                <label for="fetch-type"><code>For POST Requests</code></label>
-
-                <select class="form-control" name="fetch-parser" id="fetch-parser">
-                  <option selected value="text">Text raw response</option>
-                  <option value="json">JSON parsed response</option>
-
-                </select>
-
-                <button class="btn btn-primary" type="submit">Fetch Request</button>
-                <button class="btn btn-primary reset" type="reset">Reset Form</button>
-                <button title="Watch in Console" class="btn btn-primary parse" type="reset">Parse JSON</button>
-                <button title="Switch POST to see output for JSON upload file" class="btn btn-primary read" type="reset">Read JSON</button>
-
-              </form>
-
-
-              <code class="response"><p>Server Response below: </p></code>
-              <div contenteditable="true" class="out"></div>
-
-
-
-
+      <h1 class="text-center">Fetch - POST / GET service</h1>
+      <h3>For Best visual effect use Developers Tools - Console</h3>
+      <div class="row">
+        <div class="col-lg-12">
+          <form class="form form-control">
+            <div class="url">
+              <input
+                class="form-control"
+                value="https://jsonplaceholder.typicode.com/todos"
+                list="list"
+                placeholder="Enter url address"
+                type="text"
+                name="fetch-url"
+                id="fetch-input"
+              />
             </div>
 
+            <div>
+              <textarea
+                class="form-control"
+                placeholder="BODY"
+                name="post-body"
+                id="post-body"
+              >
+{"name": "Farid", "url": "http://google.com", "tag": "<div class='block'><p><b>Hello</b></p></div>"}</textarea
+              >
+            </div>
 
+            <div>
+              <input
+                accept=".json"
+                style="
+                  max-width: 250px !important;
+                  margin-top: 30px;
+                  color: #0b5ed7 !important;
+                  display: none !important;
+                "
+                class="form-control reader"
+                type="file"
+                name="json"
+                id="inputGroupFile01"
+              />
+            </div>
 
+            <select class="form-control" name="fetch-params" id="fetch-params">
+              <option value="GET">GET</option>
+              <option value="POST">POST</option>
+            </select>
+
+            <select class="form-control" name="fetch-type" id="fetch-type">
+              <option selected value="application/json">
+                Content-Type: application/json
+              </option>
+              <option selected value="application/text">
+                Content-Type: application/text
+              </option>
+            </select>
+            <label for="fetch-type"><code>For POST Requests</code></label>
+
+            <select class="form-control" name="fetch-parser" id="fetch-parser">
+              <option selected value="text">Text raw response</option>
+              <option value="json">JSON parsed response</option>
+            </select>
+
+            <button class="btn btn-primary" type="submit">Fetch Request</button>
+            <button class="btn btn-primary reset" type="reset">
+              Reset Form
+            </button>
+            <button
+              title="Watch in Console"
+              class="btn btn-primary parse"
+              type="reset"
+            >
+              Parse JSON
+            </button>
+            <button
+              title="Switch POST to see output for JSON upload file"
+              class="btn btn-primary read"
+              type="reset"
+            >
+              Read JSON
+            </button>
+          </form>
+
+          <code class="response"><p>Server Response below:</p></code>
+          <div contenteditable="true" class="out"></div>
         </div>
-
-
-
-
+      </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
-    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
-  </script>
-  <script src="fetch.js"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+      crossorigin="anonymous"
+    ></script>
+    <script src="fetch.js"></script>
+  </body>
 </html>

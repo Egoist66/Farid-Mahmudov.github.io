@@ -1,4 +1,3 @@
-
 /*
   Fetch POST/GET App,
   Author: Farid Makhmudov,
@@ -9,201 +8,161 @@
 
 */
 
-
 "use strict";
 
 
+window.addEventListener('DOMContentLoaded', function(){
 
-let method = '';
-const primary_method = document.querySelector('#fetch-params');
-const form = document.querySelector('form');
 
-function observeSelect(){
+          
+  let method = "";
+  const primary_method = document.querySelector("#fetch-params");
+  const form = document.querySelector("form");
 
-  const body = document.querySelector('#post-body');
-  const jsonreader = document.querySelector('#inputGroupFile01');
+  function observeSelect() {
+    const body = document.querySelector("#post-body");
+    const jsonreader = document.querySelector("#inputGroupFile01");
 
-  if(this.value === "GET"){
-    method = this.value;
+    if (this.value === "GET") {
+      method = this.value;
+      body.style.cssText = "display: none !important";
+      jsonreader.style.cssText = "display: none !important";
+    } else {
+      method = this.value;
+      body.style.cssText = "display: block !important";
+      jsonreader.style.cssText = "display: block !important";
+    }
+
+    return console.log(method);
+  }
+
+  primary_method.addEventListener("change", observeSelect);
+
+
+
+  async function sendRequest() {
+    const body = document.querySelector("#post-body");
+    const url = document.querySelector("#fetch-input");
+    const out = document.querySelector(".out");
+    const fetchType = document.querySelector("#fetch-type");
+    const fetchParser = document.querySelector("#fetch-parser");
+
+    if (method === "POST") {
+      // POST Block
+
+      let parsedStr = JSON.parse(document.querySelector("textarea").value);
+      let stringifiedStr = JSON.stringify(parsedStr);
+
+      const response = await fetch(url.value, {
+        method: method,
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": `${fetchType.value}`,
+        },
+        body: stringifiedStr,
+      });
+
+      if (fetchParser.value === "text") {
+        if (response.ok) {
+          return await response
+            .text()
+            .then((response) => (out.innerHTML = response));
+        } else {
+          out.innerHTML = new Error("Fetch failed" + " " + response.status);
+        }
+      } else {
+        if (response.ok) {
+          let data = await response.json();
+          console.log(data);
+
+          for (let key in data) {
+            out.innerHTML += `<pre>${key}: ${JSON.stringify(data[key])}</pre>`;
+          }
+        } else {
+          out.innerHTML = new Error("Fetch failed" + " " + response.status);
+        }
+      }
+    } else {
+      // GET Block
+
+      try {
+        const response = await fetch(url.value);
+        let data;
+        console.log(response.status);
+
+        if (fetchParser.value === "text") {
+          data = await response.text();
+          console.log(data);
+
+          out.innerHTML = `<pre>${data}</pre>`;
+        } else {
+          out.innerHTML = "";
+          data = await response.json();
+          console.log(data);
+          for (let key in data) {
+            out.innerHTML += `<pre>${key}: ${JSON.stringify(data[key])}</pre>`;
+          }
+        }
+      } catch (e) {
+        out.innerHTML = e;
+      }
+    }
+  }
+
+  form.addEventListener("submit", function (e) {
+    const url = document.querySelector("#fetch-input");
+    e.preventDefault();
+
+    if (url.value === "") {
+      alert("URL is required");
+    } else {
+      sendRequest();
+    }
+  });
+
+  document.querySelector(".reset").onclick = () => {
+    const body = document.querySelector("#post-body");
+    const jsonreader = document.querySelector("#inputGroupFile01");
+    document.querySelector(".out").innerHTML = "";
+
     body.style.cssText = "display: none !important";
     jsonreader.style.cssText = "display: none !important";
-  }
-  else {
-    method = this.value;
-    body.style.cssText = "display: block !important";
-    jsonreader.style.cssText = "display: block !important";
-  }
+  };
 
-  return console.log(method);
-}
+  document.querySelector(".parse").onclick = () => {
+    let parsedStr;
 
+    if (document.querySelector("textarea").value === "") {
+      alert("Nothing to parse !");
+    } else {
+      parsedStr = JSON.parse(document.querySelector("textarea").value);
+      alert("Parsing from default Body is done, check the console");
+      console.log(parsedStr);
+    }
+  };
 
-
-primary_method.addEventListener('change', observeSelect);
-
-// document.querySelector('#fetch-type').addEventListener('change', function(){
-//     if(this.value === "application/json"){
-//       alert("Warning!!!" + ' ' + "This Content-type works only for clear JSON format added in POST request Body. Do not choose this or there will be an Error. Instead use text content type");
-//     }
-// })
-
-
-async function sendRequest(){
-
-  
-  const body = document.querySelector('#post-body');
-  const url = document.querySelector('#fetch-input');
-  const out = document.querySelector('.out');
-  const fetchType = document.querySelector('#fetch-type');
-  const fetchParser = document.querySelector('#fetch-parser');
- 
-
-  if(method === "POST"){
-
-    // POST Block
-
-    let parsedStr = JSON.parse(document.querySelector('textarea').value);
-    let stringifiedStr = JSON.stringify(parsedStr);
-    
-    const response = await fetch(url.value, {
-      method: method,
-      headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': `${fetchType.value}`,
-      },
-      body: stringifiedStr
+  function getJSON(file) {
+    return new Promise(function (resolve, reject) {
+      let reader = new FileReader();
+      reader.onload = function () {
+        resolve(reader.result);
+      };
+      reader.onerror = reject;
+      reader.readAsText(file);
     });
-
-
-    if(fetchParser.value === "text"){
-      
-      if(response.ok){
-        return await response.text().then(response => out.innerHTML = response);
-      }
-      else {
-        out.innerHTML = new Error('Fetch failed' + ' ' + response.status);
-      }
-    }
-    else {
-        
-      if(response.ok){
-       
-        let data =  await response.json();
-        console.log(data);
-        
-        for(let key in data){
-          out.innerHTML += `<pre>${key}: ${JSON.stringify(data[key])}</pre>`
-        }
-        
-      }
-      else {
-        out.innerHTML = new Error('Fetch failed' + ' ' + response.status);
-      }
-      }
-            
-  }
-  else {
-    
-    // GET Block
-  
-    try {
-      const response = await fetch(url.value);
-      let data;
-      console.log(response.status);
-
-      if(fetchParser.value === "text"){
-        data =  await response.text();
-        console.log(data);
-    
-        out.innerHTML = `<pre>${data}</pre>`;
-      }
-      else {
-        out.innerHTML = '';
-        data = await response.json();
-        console.log(data);
-        for(let key in data){
-          out.innerHTML += `<pre>${key}: ${JSON.stringify(data[key])}</pre>`;
-          
-        }
-       
-      }
-      
-    
-    }
-    catch(e) {
-      
-      out.innerHTML = e;
-    }
-    
-    
-        
   }
 
-}
+  document.querySelector(".read").addEventListener("click", async function () {
+    const body = document.querySelector("#post-body");
+    let file = document.querySelector("#inputGroupFile01");
 
-form.addEventListener('submit', function(e){
-  const url = document.querySelector('#fetch-input');
-  e.preventDefault();
+    let parsedFile = getJSON(file.files[0]);
 
-
-  if(url.value === ''){
-    alert('URL is required');
-  }
-  else {
-    sendRequest();
-  }
-  
-})
-
-
-document.querySelector('.reset').onclick = () => {
-  const body = document.querySelector('#post-body');
-  const jsonreader = document.querySelector('#inputGroupFile01');
-  document.querySelector('.out').innerHTML = '';
-
-  body.style.cssText = "display: none !important";
-  jsonreader.style.cssText = "display: none !important";
-
-}
-
-document.querySelector('.parse').onclick = ()  => {
-  let parsedStr;
-  
-  if(document.querySelector('textarea').value === ''){
-    alert('Nothing to parse !');
-  }
-  else {
-    parsedStr = JSON.parse(document.querySelector('textarea').value);
-    alert('Parsing from default Body is done, check the console');
-    console.log(parsedStr);
-  }
-
-  
-}
-
-
-function getJSON(file) {
-  return new Promise(function (resolve, reject) {
-    let reader = new FileReader();
-    reader.onload = function () {
-      resolve(reader.result);
-    };
-    reader.onerror = reject;
-    reader.readAsText(file);
+    body.innerHTML = await parsedFile;
   });
-}
 
 
-document.querySelector('.read').addEventListener('click', async function(){
 
-  
-  const body = document.querySelector('#post-body');
-  let file = document.querySelector('#inputGroupFile01');
-
-
-  let parsedFile = getJSON(file.files[0]);
-
-  body.innerHTML = await parsedFile;
 
 
 })
