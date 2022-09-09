@@ -172,7 +172,7 @@ window.addEventListener('DOMContentLoaded', function(){
       const body = document.querySelector("#post-body");
       body.style.cssText = "display: none !important";
       const jsonreader = document.querySelector("#inputGroupFile01");
-      jsonreader.style.cssText = "display: block !important";
+      jsonreader.style.cssText = "display: none !important";
       alert("No file or File type error !! ");
    
     }
