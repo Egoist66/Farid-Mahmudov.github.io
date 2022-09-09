@@ -18,7 +18,9 @@ window.addEventListener('DOMContentLoaded', function(){
   let method = "";
   const primary_method = document.querySelector("#fetch-params");
   const fetchParser = document.querySelector("#fetch-parser");
+  const fetchType = document.querySelector("#fetch-type");
   const form = document.querySelector("form");
+  const out = document.querySelector('.out').innerHTML;
 
   function observeSelect() {
     const body = document.querySelector("#post-body");
@@ -28,12 +30,12 @@ window.addEventListener('DOMContentLoaded', function(){
       method = this.value;
       body.style.cssText = "display: none !important";
       jsonreader.style.cssText = "display: none !important";
-      document.querySelector('.out').innerHTML = '';
+      out.innerHTML = '';
     } else {
       method = this.value;
       body.style.cssText = "display: block !important";
       jsonreader.style.cssText = "display: block !important";
-      document.querySelector('.out').innerHTML = '';
+      out.innerHTML = '';
     }
 
     return console.log(method);
@@ -42,8 +44,17 @@ window.addEventListener('DOMContentLoaded', function(){
   primary_method.addEventListener("change", observeSelect);
 
   
-  fetchParser.onchange = function(){
+  fetchType.onchange = function(){
     if(this.value === "application/json"){
+    out.innerHTML = '';
+  }
+  else {
+    out.innerHTML = '';
+  }
+  }
+  
+  fetchParser.onchange = function(){
+    if(this.value === "json"){
     out.innerHTML = '';
   }
   else {
