@@ -21,14 +21,17 @@ const form = document.querySelector('form');
 function observeSelect(){
 
   const body = document.querySelector('#post-body');
+  const jsonreader = document.querySelector('#inputGroupFile01');
 
   if(this.value === "GET"){
     method = this.value;
     body.style.cssText = "display: none !important";
+    jsonreader.style.cssText = "display: none !important";
   }
   else {
     method = this.value;
     body.style.cssText = "display: block !important";
+    jsonreader.style.cssText = "display: block !important";
   }
 
   return console.log(method);
@@ -56,6 +59,8 @@ async function sendRequest(){
  
 
   if(method === "POST"){
+
+    // POST Block
 
     let parsedStr = JSON.parse(document.querySelector('textarea').value);
     let stringifiedStr = JSON.stringify(parsedStr);
@@ -99,6 +104,7 @@ async function sendRequest(){
   }
   else {
     
+    // GET Block
   
     try {
       const response = await fetch(url.value);
@@ -122,12 +128,7 @@ async function sendRequest(){
        
       }
       
-      
-      
-   
-     
-      
-
+    
     }
     catch(e) {
       
@@ -157,9 +158,11 @@ form.addEventListener('submit', function(e){
 
 document.querySelector('.reset').onclick = () => {
   const body = document.querySelector('#post-body');
+  const jsonreader = document.querySelector('#inputGroupFile01');
   document.querySelector('.out').innerHTML = '';
 
   body.style.cssText = "display: none !important";
+  jsonreader.style.cssText = "display: none !important";
 
 }
 
@@ -177,3 +180,30 @@ document.querySelector('.parse').onclick = ()  => {
 
   
 }
+
+
+function getJSON(file) {
+  return new Promise(function (resolve, reject) {
+    let reader = new FileReader();
+    reader.onload = function () {
+      resolve(reader.result);
+    };
+    reader.onerror = reject;
+    reader.readAsText(file);
+  });
+}
+
+
+document.querySelector('.read').addEventListener('click', async function(){
+
+  
+  const body = document.querySelector('#post-body');
+  let file = document.querySelector('#inputGroupFile01');
+
+
+  let parsedFile = getJSON(file.files[0]);
+
+  body.innerHTML = await parsedFile;
+
+
+})
