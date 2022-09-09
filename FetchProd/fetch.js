@@ -49,11 +49,22 @@ window.addEventListener('DOMContentLoaded', function(){
     const fetchType = document.querySelector("#fetch-type");
     const fetchParser = document.querySelector("#fetch-parser");
 
+    fetchParser.onchange = function(){
+      if(this.value === "application/json"){
+      out.innerHTML = '';
+    }
+    else {
+      out.innerHTML = '';
+    }
+    }
+
     if (method === "POST") {
       // POST Block
 
       let parsedStr = JSON.parse(document.querySelector("textarea").value);
       let stringifiedStr = JSON.stringify(parsedStr);
+
+     
 
       const response = await fetch(url.value, {
         method: method,
