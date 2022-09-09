@@ -169,7 +169,8 @@ window.addEventListener('DOMContentLoaded', function(){
      
     }
     else {
-      document.querySelector('#fetch-params').value = "POST";
+      const body = document.querySelector("#post-body");
+      body.style.cssText = "display: none !important";
       alert("No file or File type error !! ");
    
     }
