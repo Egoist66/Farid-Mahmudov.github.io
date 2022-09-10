@@ -53,12 +53,12 @@ window.addEventListener("DOMContentLoaded", async function () {
 
   document.querySelector("#enter-text").addEventListener("input", translitSymbols);
 
-    $Query('#enter-text').addEventListener('blur', function(){
-        out.innerHTML += ' : ' + ' ' +  this.value.slice(0, 18) + out.textContent;
+    // $Query('#enter-text').addEventListener('blur', function(){
+    //     out.innerHTML += ' : ' + ' ' +  this.value.slice(0, 18) + out.textContent;
        
    
   
-    });
+    // });
 
  
 });
