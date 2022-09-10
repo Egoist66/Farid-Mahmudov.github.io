@@ -2,7 +2,7 @@
 
 window.addEventListener("DOMContentLoaded", async function () {
   let filteredData;
-  let out = $Query("#out-text");
+  let out = this.document.querySelector("#out-text");
 
 
 
@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", async function () {
       let response = await fetch(url);
       data = await response.json();
     } catch (e) {
-      logg(e);
+      console.log(e);
     }
 
     return data;
@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", async function () {
 
 
   filteredData = await getData("./translit/symbols.json");
-  logg(filteredData["ru"]);
+  console.log(filteredData["ru"]);
 
 
 
@@ -32,7 +32,7 @@ window.addEventListener("DOMContentLoaded", async function () {
 
   function translitSymbols(e) {
     let str = "";
-    let text = $Query("#enter-text").value;
+    let text = document.querySelector("#enter-text").value;
 
     for (let i = 0; i < text.length; i++) {
       let k = text[i];
