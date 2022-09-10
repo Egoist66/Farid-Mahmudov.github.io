@@ -213,8 +213,4 @@ window.addEventListener('DOMContentLoaded', function(){
   }
 
 
-
-
-
-
-})
+});

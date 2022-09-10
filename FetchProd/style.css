@@ -2,7 +2,8 @@
 /* CSS Document */
 
 body {
-  min-height: 1500px;
+  min-height: 1900px;
+  background: currentColor;
 }
 
 h1 {
@@ -25,6 +26,7 @@ input {
   outline: none !important;
   border: 1px solid #ced4da !important;
   border-radius: 4px !important;
+  color: white;
 }
 
 .parse {
@@ -67,6 +69,7 @@ h3 {
 
 form {
   border: none !important;
+  padding: 20px !important;
 }
 
 label {
@@ -86,4 +89,24 @@ input.form-control.reader {
   margin-top: 30px !important;
   max-width: 250px !important;
   color: #0b5ed7 !important;
+}
+
+
+h2 {
+  margin: 30px 0px;
+  color: white;
+}
+
+.trans-l {
+  margin: 30px 0px;
+}
+
+.trans-block {
+  background-color: white;
+  padding: 20px;
+  border-radius: 0.375rem;
+}
+
+#out-text {
+  min-height: 37px !important;
 }
